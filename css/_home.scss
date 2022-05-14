@@ -1,0 +1,126 @@
+#home {
+    height: 100vh;
+    background-color: #223f42;
+    background-image: url(../images/landing.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-blend-mode: soft-light;
+    .container {
+        position: relative;
+        > div {
+            hr {
+                position: absolute;
+                top: 99%;
+                width: calc(100% - 30px);
+                height: 1px;
+                border: none;
+                margin: 0;
+                background-color: $w-light;
+            }
+            min-height: 97px;
+            // border-bottom: 1px solid white;
+            @extend %flex;
+            justify-content: space-between;
+            .logo {
+                height: 40px;
+            }
+            nav {
+                @extend %flex;
+                .burger {
+                    margin-right: $sm;
+                    span {
+                        display: block;
+                        width: 22px;
+                        height: 3px;
+                        background-color: white;
+                        margin: 5px;
+                        border-radius: 2px;
+                        cursor: pointer;
+                    }
+                }
+                ul.links {
+                    display: none;
+                    position: absolute;
+                    top: 100%;
+                    left: 0;
+                    list-style: none;
+                    width: 100vw;
+                    background-color: rgb(0,0,0,0.5);
+                    margin: 0;
+                    padding: 0;
+                    li {
+                        text-transform: capitalize;
+                        // font-size: 14px;
+                        padding: $sm;
+                        cursor: pointer;
+                        transition: all 500ms;
+                        a {
+                            color: $w-light;
+                            text-decoration: none;
+                            //Inlarge clicable zone
+                            display: inline-block;
+                            width: 100%;
+                        }
+                        &:hover a {
+                            color: $main-color;
+                        }
+                        &:hover {
+                            border-bottom: 1px solid $main-color;
+                        }
+                        &:first-child.active {
+                            border-bottom: 1px solid $main-color;
+                            a {
+                                color: $main-color;
+                            }
+                        }
+                    }
+                }
+                ul.links.active {
+                    display: block;
+                }
+                form {
+                    input {
+                        width: 0;
+                        display: none;
+                    }
+                    div.search-btn {
+                        padding-left: $sm;
+                        border-left: 1px solid $w-light;
+                        width: 40px;
+                        height: 30px;
+                        i {
+                            color: $w-light;
+                            line-height: 30px;
+                            font-size: 22px;
+                        }
+                    } 
+                }
+            }
+        }
+    }
+}
+
+@media (min-width: 768px) {
+    #home .container > div nav {
+        .burger {
+            display: none;
+        }
+        ul.links {
+            position: initial;
+            display: flex;
+            background-color: transparent;
+            width: max-content;
+            li {
+                padding-top: 0;
+                padding-bottom: 0;
+                height: 98px;
+                line-height: 98px;
+                transition: none;
+                z-index: 1;
+            }
+            &.active {
+                display: flex;
+            }
+        }
+    } 
+}
