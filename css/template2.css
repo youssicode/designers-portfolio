@@ -18,7 +18,7 @@ body {
   margin-right: auto;
 }
 
-#home .container > div nav, #home .container > div {
+#home .intro-slider .slides-wrapper, #home .container > div nav, #home .container > div {
   display: flex;
   align-items: center;
   justify-content: center;
@@ -31,6 +31,7 @@ body {
   background-repeat: no-repeat;
   background-size: cover;
   background-blend-mode: soft-light;
+  position: relative;
 }
 #home .container {
   position: relative;
@@ -115,6 +116,45 @@ body {
   color: #ccc;
   line-height: 30px;
   font-size: 22px;
+}
+#home .intro-slider {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 100%;
+  background-color: rgba(25, 200, 250, 0.3);
+  color: white;
+  overflow: hidden;
+}
+#home .intro-slider .slider-nav {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 100%;
+  padding: 15px;
+}
+#home .intro-slider .slider-nav i {
+  cursor: pointer;
+}
+#home .intro-slider .slider-nav i.fa-angle-right {
+  float: right;
+}
+#home .intro-slider .slides-wrapper {
+  width: 300%;
+}
+#home .intro-slider .slides-wrapper .slide {
+  width: 33.3333%;
+  padding: 50px;
+}
+#home .intro-slider .slides-wrapper .slide h1 {
+  font-size: 32px;
+  font-weight: 500;
+  text-transform: capitalize;
+  line-height: 1.5;
+  margin-top: 0;
+}
+#home .intro-slider .slides-wrapper .slide p {
+  line-height: 2;
 }
 
 @media (min-width: 768px) {

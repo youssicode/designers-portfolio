@@ -5,6 +5,7 @@
     background-repeat: no-repeat;
     background-size: cover;
     background-blend-mode: soft-light;
+    position: relative;
     .container {
         position: relative;
         > div {
@@ -94,6 +95,52 @@
                             font-size: 22px;
                         }
                     } 
+                }
+            }
+        }
+    }
+    .intro-slider {
+        position: absolute;
+        top: 50%;
+        transform: translateY(-50%);
+        width: 100%;
+        background-color: rgb(25,200,250,0.3);
+        color: white;
+        overflow: hidden;
+        .slider-nav {
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+            width: 100%;
+            padding: $sm;
+            i {
+                cursor: pointer;
+                &:hover {
+                    // display: block;
+                    // padding: 10px;
+                    // border: 1px solid white;
+                    // border-radius: 50%;
+                }
+            }
+            i.fa-angle-right {
+                float: right
+            }
+        }
+        .slides-wrapper {
+            @extend %flex;
+            width: 300%;
+            .slide {
+                width: 33.3333%;
+                padding: $l;
+                h1 {
+                    font-size: 32px;
+                    font-weight: 500;
+                    text-transform: capitalize;
+                    line-height: 1.5;
+                    margin-top: 0;
+                }
+                p {
+                    line-height: 2;
                 }
             }
         }
