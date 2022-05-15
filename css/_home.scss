@@ -108,27 +108,21 @@
         color: white;
         overflow: hidden;
         .slider-nav {
-            position: absolute;
-            top: 50%;
-            transform: translateY(-50%);
-            width: 100%;
-            padding: $sm;
-            i {
-                cursor: pointer;
-                &:hover {
-                    // display: block;
-                    // padding: 10px;
-                    // border: 1px solid white;
-                    // border-radius: 50%;
-                }
-            }
-            i.fa-angle-right {
-                float: right
-            }
+            display: none;
         }
         .slides-wrapper {
             @extend %flex;
             width: 300%;
+            transition: all 500ms;
+            &.active0 {
+                margin-left: 0;
+            }
+            &.active1 {
+                margin-left: -100%;
+            }
+            &.active2 {
+                margin-left: -200%;
+            }
             .slide {
                 width: 33.3333%;
                 padding: $l;
@@ -145,29 +139,86 @@
             }
         }
     }
+    .slider-pos {
+        position: absolute;
+        bottom: 30px;
+        left: 50%;
+        transform: translateX(-50%);
+        span {
+            display: inline-block;
+            width: 25px;
+            height: 25px;
+            border: 1px solid white;
+            border-radius: 50%;
+            margin: 5px;
+            cursor: pointer;
+            &.active {
+                background-color: $main-color;
+            }
+        }
+    }
 }
 
 @media (min-width: 768px) {
-    #home .container > div nav {
-        .burger {
-            display: none;
-        }
-        ul.links {
-            position: initial;
-            display: flex;
-            background-color: transparent;
-            width: max-content;
-            li {
-                padding-top: 0;
-                padding-bottom: 0;
-                height: 98px;
-                line-height: 98px;
-                transition: none;
-                z-index: 1;
+    #home {
+        .container > div nav {
+            .burger {
+                display: none;
             }
-            &.active {
+            ul.links {
+                position: initial;
                 display: flex;
+                background-color: transparent;
+                width: max-content;
+                li {
+                    padding-top: 0;
+                    padding-bottom: 0;
+                    height: 98px;
+                    line-height: 98px;
+                    transition: none;
+                    z-index: 1;
+                }
+                &.active {
+                    display: flex;
+                }
             }
         }
+        .intro-slider {
+            .slider-nav {
+                display: block;
+                position: absolute;
+                top: 50%;
+                transform: translateY(-50%);
+                width: 100%;
+                padding: $sm 0;
+                div {
+                    // Positioning the "next/prev" buttons
+                    display: inline-block;
+                    &:last-child {
+                        float: right;
+                    }
+                    padding: 20px;
+                    border-radius: 50%;
+                    cursor: pointer;
+                    &:hover {
+                        background-color: rgb(250,250,250,0.2);
+                    }
+                }
+            }
+            .slides-wrapper {
+                .slide {
+                    padding: $xl;
+                }
+            }
+        } 
     } 
+
+}
+
+@media (min-width: 992px) {
+    #home {
+        .intro-slider {
+            width: 50%;
+        }
+    }
 }
