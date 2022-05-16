@@ -24,9 +24,47 @@ body {
     align-items: center;
     justify-content: center
 }
-// Landing Section Styles
-@import "home";
+section {
+    padding: $xl 0;
+    header {
+        text-align: center;
+        h2 {
+            font-size: 40px;
+            font-weight: 500;
+            text-transform: uppercase;
+            color: black;
+            margin-bottom: 20px;
+        }
+        span {
+            display: inline-block;
+            &.line {
+                background-color: $g-dark;
+                width: 130px;
+                height: 2px;
+                position: relative;;
+                .circle {
+                    margin: 0;
+                    background-color: white;
+                    @include circle(20px,$g-dark);
+                    @extend %position-center;
+                    
+                }
+            }
+        }
+        p {
+            margin-top: 25px;
+            font-size: 16px;
+            line-height: 1.8;
+            color: $g-light;
+        }
+    }
+}
 
+//* Landing Section Styles
+@import "home";
+@import "services";
+
+//* Media Queries
 @media (min-width: 768px) {
     html {
         font-size: 16px;

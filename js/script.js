@@ -1,7 +1,14 @@
+/** ====== Responsive NavBar ======= */
 let burger = document.querySelector(".burger")
 let navBar = document.querySelector(".links")
 burger.onclick = ()=> navBar.classList.toggle("active")
 
+/** ===== Search Bar ===== */
+let searchFeild = document.querySelector('[name="search-field"]')
+searchFeild.onfocus = ()=> searchFeild.classList.add("show")
+searchFeild.onblur = ()=> searchFeild.classList.remove("show")
+
+/** ===== Slideshow ===== */ 
 let slidesWrapper = document.querySelector(".slides-wrapper")
 let slidersPosBtns = document.querySelectorAll(".slider-pos span")
 slidersPosBtns.forEach((btn,index,btns) => {
@@ -17,16 +24,21 @@ slideNext.addEventListener("click", slidNext)
 slidePrev.addEventListener("click", slidPrev)
 
 function slidNext() {
-    if (currentSlide == 2) currentSlide = -1
-    homeSlideRender( currentSlide +1  ,slidersPosBtns)
-    currentSlide ++
+    // ==== To Prevent loop sliding ===
+    if (currentSlide == 2) return
+    homeSlideRender( currentSlide + 1 ,slidersPosBtns)
+    currentSlide = (currentSlide + 1) % slidersPosBtns.length
 }
 function slidPrev() {
-    if (currentSlide == 0) currentSlide = 3
-    homeSlideRender(currentSlide -1 ,slidersPosBtns)
+    // if (currentSlide == 0) currentSlide = 3
+    // ==== To Prevent loop sliding ===
+    if (currentSlide == 0) return 
+    homeSlideRender(currentSlide - 1 ,slidersPosBtns)
     currentSlide --
 }
 function homeSlideRender(position,btns) {
+    console.log(position);
+
     btns.forEach((el,indx) => indx != position? el.classList.remove("active") : el.classList.add("active")) // Remove the "active" class from the other buttons.
     slidesWrapper.classList.remove("active0","active1","active2")
     slidesWrapper.classList.add(`active${position}`)
