@@ -1,0 +1,39 @@
+section#services {
+    .container {
+        .service {
+            display: flex;
+            flex-direction: column;
+            text-align: center;
+            margin-bottom: $md;
+            .icon {
+                margin-bottom: $md;
+            }
+            h3 {
+                font-size: 20px;
+                color: $main-color;
+                margin-top: 0;
+                margin-bottom: $md;
+            }
+            p {
+                @extend %p-style;
+            }
+        }
+    }
+}
+@media (min-width: 768px) {
+    section#services {
+        .container {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(400px, 1fr)); //Will be "1column" befor reaching the min"400px" because of the .container spécifyed width (750px/ Media 768px)
+            grid-gap: $md;
+            .service {
+                flex-direction: row;
+                text-align:left;
+                .icon {
+                    align-self: flex-start;
+                    margin-right: $md;
+                }
+            }
+        }
+    }
+}

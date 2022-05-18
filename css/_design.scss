@@ -1,0 +1,57 @@
+
+section#design {
+    background-image: url(../images/design-features.jpg);
+    background-size: cover;
+    position: relative;
+    overflow: hidden;
+    .overlay {
+        @include absolute-positioning(0,0);
+        right: 0;
+        bottom: 0;
+        transform: none;
+        background-color: $overlay;
+    }
+    img.mobile-pic {
+        display: none;
+    }
+    .our-design {
+        position: relative; // To avoid the overllay's darkness
+        background-color: $main-color-trans;
+        padding: $md $l;
+        color: whitesmoke;
+        h1 {
+            font-size: 28px;
+            font-weight: 500;
+            text-transform: capitalize;
+            line-height: 1.5;
+            margin-top: 0;
+        }
+        ul {
+            margin-top: $l;
+            padding-left: 0;
+            li {
+                i {
+                    font-size:medium;
+                    padding-right: $md;
+                }
+                font-size: 17px;
+                margin-bottom: $md;
+                list-style: none;
+
+
+            }
+        }
+    }
+}
+
+@media (min-width : 768px) {
+    section#design {
+        img.mobile-pic {
+            display: initial;
+            @include absolute-positioning(75%,25%)
+        }
+        .our-design {
+            left: 50%;
+            }
+        }
+}

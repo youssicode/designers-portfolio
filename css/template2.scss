@@ -19,15 +19,11 @@ body {
     margin-left: auto;
     margin-right: auto;
 }
-%flex {
-    display: flex;
-    align-items: center;
-    justify-content: center
-}
 section {
     padding: $xl 0;
     header {
         text-align: center;
+        margin-bottom: $xl;
         h2 {
             font-size: 40px;
             font-weight: 500;
@@ -46,16 +42,16 @@ section {
                     margin: 0;
                     background-color: white;
                     @include circle(20px,$g-dark);
-                    @extend %position-center;
+                    @include absolute-positioning(50%,50%);
                     
                 }
             }
         }
         p {
-            margin-top: 25px;
-            font-size: 16px;
-            line-height: 1.8;
-            color: $g-light;
+          @extend %p-style;
+          max-width: 550px;
+          margin-left: auto;
+          margin-right: auto;
         }
     }
 }
@@ -63,6 +59,7 @@ section {
 //* Landing Section Styles
 @import "home";
 @import "services";
+@import "design";
 
 //* Media Queries
 @media (min-width: 768px) {
