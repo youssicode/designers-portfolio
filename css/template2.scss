@@ -20,6 +20,9 @@ body {
     margin-right: auto;
 }
 section {
+    &:nth-child(2n+1) {
+        background-color: $main-color;
+    }
     padding: $xl 0;
     header {
         text-align: center;
@@ -49,6 +52,7 @@ section {
         }
         p {
           @extend %p-style;
+          width: 85%;
           max-width: 550px;
           margin-left: auto;
           margin-right: auto;
@@ -60,6 +64,7 @@ section {
 @import "home";
 @import "services";
 @import "design";
+@import "portfolio";
 
 //* Media Queries
 @media (min-width: 768px) {

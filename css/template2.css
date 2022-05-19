@@ -34,6 +34,9 @@ body {
 section {
   padding: 70px 0;
 }
+section:nth-child(2n+1) {
+  background-color: #19c8fa;
+}
 section header {
   text-align: center;
   margin-bottom: 70px;
@@ -67,6 +70,7 @@ section header span.line .circle {
   transform: translate(-50%, -50%);
 }
 section header p {
+  width: 85%;
   max-width: 550px;
   margin-left: auto;
   margin-right: auto;
@@ -399,6 +403,60 @@ section#design .our-design ul li i {
     left: 50%;
   }
 }
+section#portfolio .gallery {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  row-gap: 3px;
+  max-width: 1170px;
+  margin-left: auto;
+  margin-right: auto;
+}
+section#portfolio .gallery .gall-item {
+  position: relative;
+  overflow: hidden;
+}
+section#portfolio .gallery .gall-item:hover img {
+  transform: scale(1.15) rotate(5deg);
+}
+section#portfolio .gallery .gall-item:hover .gall-item-caption {
+  height: 85px;
+}
+section#portfolio .gallery .gall-item img {
+  transition: all 300ms ease-out;
+}
+section#portfolio .gallery .gall-item .gall-item-caption {
+  position: absolute;
+  width: 100%;
+  height: 0;
+  bottom: 0;
+  background-color: whitesmoke;
+  padding-left: 30px;
+  transition: all 300ms ease-out;
+}
+section#portfolio .gallery .gall-item .gall-item-caption p {
+  font-size: 16px;
+  font-weight: 500;
+}
+section#portfolio .gallery .gall-item .gall-item-caption p:last-child {
+  color: #19c8fa;
+}
+section#portfolio button.more-items {
+  border: none;
+  box-shadow: 2px 2px 5px #777;
+  border-radius: 5px;
+  font-size: 18px;
+  font-weight: 600;
+  letter-spacing: 1.3px;
+  color: whitesmoke;
+  background-color: #19c8fa;
+  padding: 15px 30px;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 30px;
+  cursor: pointer;
+}
+
 @media (min-width: 768px) {
   html {
     font-size: 16px;

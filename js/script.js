@@ -17,7 +17,7 @@ slidersPosBtns.forEach((btn,index,btns) => {
     })
 })
 
-let currentSlide = 0;
+let currentSlide = 0
 let slideNext = document.querySelector(".slide-next")
 let slidePrev = document.querySelector(".slide-prev")
 slideNext.addEventListener("click", slidNext)
@@ -37,9 +37,27 @@ function slidPrev() {
     currentSlide --
 }
 function homeSlideRender(position,btns) {
-    console.log(position);
+    console.log(position)
 
     btns.forEach((el,indx) => indx != position? el.classList.remove("active") : el.classList.add("active")) // Remove the "active" class from the other buttons.
     slidesWrapper.classList.remove("active0","active1","active2")
     slidesWrapper.classList.add(`active${position}`)
+}
+
+//* Portfolio Items Generator
+
+let itemTemplate = document.getElementsByTagName("template")[0]
+let portfolioGallery = document.querySelector(".gallery")
+let itemsNbr = 8
+console.log(itemsNbr.length)
+
+for (let i = 1; i < itemsNbr+1 ; i++) {
+    // console.log(portfolioGallery)
+    let cloned = itemTemplate.content.cloneNode(true) // Remove ".content" if u clone ".gall-item" bloc directly (without using "template" Tag)
+    i = i.toLocaleString('en-US',{minimumIntegerDigits:2}) // 01 , 02, ... SEE MORE ABOUT .toLocaleString HERE: (https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number/toLocaleString)
+    // i = i.toLocaleString('ar-SA',{minimumIntegerDigits:2}) // ٠١ , ٠٢
+    let imgSource = `./images/shuffle-${i}.jpg` // we can avoid the line above by removing zeros from ths photos' names!
+    cloned.querySelector("img").src = imgSource
+    // cloned.querySelector("img").setAttribute("src","./images/shuffle-03.jpg") // The same as above
+    portfolioGallery.appendChild(cloned)
 }

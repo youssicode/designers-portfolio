@@ -10,7 +10,7 @@
     <link rel="stylesheet" href="./css/template2.css">
 </head>
 <body>
-    <!-- start home section -->
+    <!--* start home section -->
     <div id="home"> 
         <div class="container">
             <div>
@@ -80,7 +80,7 @@
         </div>
     </div>
 
-    <!-- start services section -->
+    <!--* start services section -->
     <section id="services">
         <header>
             <h2>services</h2>
@@ -120,7 +120,7 @@
         </div>
     </section>
 
-    <!-- start design section -->
+    <!--* start design section -->
     <section id="design">
         <div class="overlay"></div> <!-- Add darkness to the background --> 
         <!-- <div class="container"> -->
@@ -138,17 +138,26 @@
         <!-- </div> -->
     </section>
 
-    <!-- start portfolio section -->
+    <!--* start portfolio section -->
     <section id="portfolio">
         <header>
             <h2>portfolio</h2>
             <span class="line"><span class="circle"></span></span>
-            <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit.</p>
+            <p>Curabitur arcu erat, accumsan id imperdiet et, porttitor at sem. Mauris blandit aliquet elit, eget tincidunt.</p>
         </header>
 
-        <div class="container">
-
+        <div class="gallery"> <!-- Need a container in large screens -->
+            <template>
+                <div class="gall-item">
+                    <img src="" alt="gallery-photo" width="100%" height="auto">
+                    <div class="gall-item-caption">
+                        <p>Awesome Image</p>
+                        <p>Photography</p>
+                    </div>
+                </div>
+            </template>
         </div>
+        <button class="more-items">More</button>
     </section>
 
     <!-- start video section -->
@@ -158,7 +167,7 @@
         </div>
     </section>
 
-    <!-- start about section -->
+    <!--* start about section -->
     <section id="about">
         <header>
             <h2>about</h2>

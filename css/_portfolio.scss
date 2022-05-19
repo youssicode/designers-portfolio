@@ -1,0 +1,69 @@
+section#portfolio {
+    .gallery {
+        display: grid;
+        // grid-template-columns: 1fr; // Used with MediaQueries
+        grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); // We can use this line to avoid using MediaQueries
+        row-gap: 3px;
+        // To contain (& center) the Gallery (u can use ".container" DIV instead)
+        max-width: 1170px;
+        margin-left: auto;
+        margin-right: auto;
+        .gall-item {
+            position: relative;
+            overflow: hidden; // Hide ".gall-item-caption" outside the element
+            &:hover img {
+                transform: scale(1.15) rotate(5deg);
+            }
+            &:hover .gall-item-caption {
+                height: 85px;
+            }
+            img {
+                transition: all 300ms ease-out;
+            }
+            .gall-item-caption {
+                position: absolute;
+                width: 100%;
+                height: 0;
+                bottom: 0;
+                background-color: whitesmoke;
+                padding-left: $md;
+                transition: all 300ms ease-out;
+                p {
+                    font-size: 16px;
+                    font-weight: 500;
+                    &:last-child {
+                        color: $main-color;
+                    }
+                }
+            }
+        }
+    }
+    button.more-items {
+        border: none;
+        box-shadow: 2px 2px 5px $g-light;
+        border-radius: 5px;
+        font-size: 18px;
+        font-weight: 600;
+        letter-spacing: 1.3px;
+        color: whitesmoke;
+        background-color: $main-color;
+        padding: $sm $md;
+        // use @mixin marginCentering
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+        margin-top: $md;
+        cursor: pointer;
+    }
+}
+
+// @media (min-width: 768px) {
+//     section#portfolio .gallery {         
+//         grid-template-columns: 1fr 1fr;       
+//     }
+// }
+// @media (min-width: 992px) {
+//     section#portfolio .gallery {
+//             grid-template-columns: repeat(4,1fr);
+//     }
+// }
