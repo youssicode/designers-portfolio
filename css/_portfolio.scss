@@ -24,8 +24,11 @@ section#portfolio {
         grid-template-columns: repeat(auto-fit, minmax(350px, 1fr)); // We can use this line to avoid using MediaQueries
         row-gap: 3px;
         // To contain (& center) the Gallery (u can use ".container" DIV instead)
-        max-width: 1600px;
+        max-width: 1170px;
         .gall-item {
+            &.hide {
+                display: none;
+            }
             position: relative;
             overflow: hidden; // Hide ".gall-item-caption" outside the element
             &:hover img {

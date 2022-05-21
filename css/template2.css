@@ -431,11 +431,14 @@ section#portfolio .gallery {
   margin-right: auto;
   grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
   row-gap: 3px;
-  max-width: 1600px;
+  max-width: 1170px;
 }
 section#portfolio .gallery .gall-item {
   position: relative;
   overflow: hidden;
+}
+section#portfolio .gallery .gall-item.hide {
+  display: none;
 }
 section#portfolio .gallery .gall-item:hover img {
   transform: scale(1.15) rotate(5deg);

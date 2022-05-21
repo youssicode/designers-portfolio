@@ -47,30 +47,62 @@ function homeSlideRender(position,btns) {
 //* Portfolio Section */
 
 
-//* Portfolio Items Generator
+// Portfolio Items Generator
 
-let  portfolioProjectsCategories = ["","print web app","photo web", "photo","print app","photo app","photo print","app","photo"]
+let  portfolioProjectsCategories = ["print web","photo web", "photo","print app","web app","photo print","app","photo","photo app"]
 let itemTemplate = document.getElementsByTagName("template")[0]
 let portfolioGallery = document.querySelector(".gallery")
-let itemsNbr = 8
+let itemsNbr = 6
+let startcounter = 1
 
-for (let i = 1; i < itemsNbr+1 ; i++) {
-    let cloned = itemTemplate.content.cloneNode(true) // Remove ".content" if u clone ".gall-item" bloc directly (without using "template" Tag)
-    cloned.querySelector(".gall-item").setAttribute("data-categorie", portfolioProjectsCategories[i]) 
-    i = i.toLocaleString('en-US',{minimumIntegerDigits:2}) // 01 , 02, ... SEE MORE ABOUT .toLocaleString HERE: (https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number/toLocaleString)
-    // i = i.toLocaleString('ar-SA',{minimumIntegerDigits:2}) // ٠١ , ٠٢
-    let imgSource = `./images/shuffle-${i}.jpg` // we can avoid the line above by removing zeros from ths photos' names!
-    cloned.querySelector("img").src = imgSource
-    portfolioGallery.appendChild(cloned)
+renderItems(startcounter,itemsNbr+1)
+
+// Add More Items to The Gallery
+let moreBtn = document.querySelector(".more-items")
+moreBtn.onclick = ()=> {
+    sortItems("all") // Display Initial Items befor Adding New Ones
+    addItems()
+    moreBtn.setAttribute("disabled", "")
+}
+function  addItems() {
+    startcounter = itemsNbr + 1
+    itemsNbr += 3
+    renderItems(startcounter,itemsNbr+1)
+}
+function  renderItems(start,end) {
+    for (let i = start; i < end ; i++) {
+        let cloned = itemTemplate.content.cloneNode(true) // Remove ".content" if u clone ".gall-item" bloc directly (without using "template" Tag)
+        cloned.querySelector(".gall-item").setAttribute("data-categorie", portfolioProjectsCategories[i-1]) 
+        i = i.toLocaleString('en-US',{minimumIntegerDigits:2}) // 01 , 02, ... SEE MORE ABOUT .toLocaleString HERE: (https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number/toLocaleString)
+        // i = i.toLocaleString('ar-SA',{minimumIntegerDigits:2}) // ٠١ , ٠٢
+        let imgSource = `./images/shuffle-${i}.jpg` // we can avoid the line above by removing zeros from ths photos' names!
+        cloned.querySelector("img").src = imgSource
+        portfolioGallery.appendChild(cloned)
+    }
 }
 
-// Sort projects by categories
+// Sorting projects by categories
 
 let sortBtns = document.querySelectorAll("li[data-categorie]")
-sortBtns.forEach(()=> {
-    this.addEventListener("click", renderProjrcts)
+sortBtns.forEach(btn => {
+    btn.addEventListener("click", function() {
+        sortItems(btn.dataset.categorie) 
+    })
 })
-function  renderProjrcts() {
-    console.log(this[data-categorie])
-    
+function  sortItems(categ) {
+    let galleryItems = document.querySelectorAll(".gall-item")
+    galleryItems.forEach(item => {
+        item.classList.remove("hide")
+        if ((categ != "all") && (!item.dataset.categorie.includes(categ))) item.classList.add("hide")
+    })
 }
+
+
+// for (let i = startcounter; i < itemsNbr+1 ; i++) {
+//     let cloned = itemTemplate.content.cloneNode(true) // Remove ".content" if u clone ".gall-item" bloc directly (without using "template" Tag)
+//     cloned.querySelector(".gall-item").setAttribute("data-categorie", portfolioProjectsCategories[i-1]) 
+//     i = i.toLocaleString('en-US',{minimumIntegerDigits:2}) // 01 , 02, ... SEE MORE ABOUT .toLocaleString HERE: (https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number/toLocaleString)
+//     let imgSource = `./images/shuffle-${i}.jpg` // we can avoid the line above by removing zeros from ths photos' names!
+//     cloned.querySelector("img").src = imgSource
+//     portfolioGallery.appendChild(cloned)
+// }
