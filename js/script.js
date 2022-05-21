@@ -44,20 +44,33 @@ function homeSlideRender(position,btns) {
     slidesWrapper.classList.add(`active${position}`)
 }
 
+//* Portfolio Section */
+
+
 //* Portfolio Items Generator
 
+let  portfolioProjectsCategories = ["","print web app","photo web", "photo","print app","photo app","photo print","app","photo"]
 let itemTemplate = document.getElementsByTagName("template")[0]
 let portfolioGallery = document.querySelector(".gallery")
 let itemsNbr = 8
-console.log(itemsNbr.length)
 
 for (let i = 1; i < itemsNbr+1 ; i++) {
-    // console.log(portfolioGallery)
     let cloned = itemTemplate.content.cloneNode(true) // Remove ".content" if u clone ".gall-item" bloc directly (without using "template" Tag)
+    cloned.querySelector(".gall-item").setAttribute("data-categorie", portfolioProjectsCategories[i]) 
     i = i.toLocaleString('en-US',{minimumIntegerDigits:2}) // 01 , 02, ... SEE MORE ABOUT .toLocaleString HERE: (https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number/toLocaleString)
     // i = i.toLocaleString('ar-SA',{minimumIntegerDigits:2}) // ٠١ , ٠٢
     let imgSource = `./images/shuffle-${i}.jpg` // we can avoid the line above by removing zeros from ths photos' names!
     cloned.querySelector("img").src = imgSource
-    // cloned.querySelector("img").setAttribute("src","./images/shuffle-03.jpg") // The same as above
     portfolioGallery.appendChild(cloned)
+}
+
+// Sort projects by categories
+
+let sortBtns = document.querySelectorAll("li[data-categorie]")
+sortBtns.forEach(()=> {
+    this.addEventListener("click", renderProjrcts)
+})
+function  renderProjrcts() {
+    console.log(this[data-categorie])
+    
 }

@@ -1,4 +1,4 @@
-#home .intro-slider .slides-wrapper, #home .container > div nav, #home .container > div {
+section#portfolio nav ul, #home .intro-slider .slides-wrapper, #home .container > div nav, #home .container > div {
   display: flex;
   align-items: center;
   justify-content: center;
@@ -403,13 +403,35 @@ section#design .our-design ul li i {
     left: 50%;
   }
 }
-section#portfolio .gallery {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-  row-gap: 3px;
-  max-width: 1170px;
+section#portfolio nav {
+  width: -webkit-max-content;
+  width: -moz-max-content;
+  width: max-content;
+  display: block;
   margin-left: auto;
   margin-right: auto;
+  margin-bottom: 50px;
+}
+section#portfolio nav ul {
+  list-style: none;
+}
+section#portfolio nav ul li {
+  font-size: 18px;
+  text-transform: capitalize;
+  padding: 15px;
+  margin-right: 15px;
+  cursor: pointer;
+}
+section#portfolio nav ul li.active {
+  background-color: #19c8fa;
+}
+section#portfolio .gallery {
+  display: grid;
+  margin-left: auto;
+  margin-right: auto;
+  grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+  row-gap: 3px;
+  max-width: 1600px;
 }
 section#portfolio .gallery .gall-item {
   position: relative;
@@ -422,6 +444,8 @@ section#portfolio .gallery .gall-item:hover .gall-item-caption {
   height: 85px;
 }
 section#portfolio .gallery .gall-item img {
+  width: 100%;
+  height: 100%;
   transition: all 300ms ease-out;
 }
 section#portfolio .gallery .gall-item .gall-item-caption {
