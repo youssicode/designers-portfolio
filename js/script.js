@@ -92,8 +92,11 @@ sortBtns.forEach(btn => {
 function  sortItems(categ) {
     let galleryItems = document.querySelectorAll(".gall-item")
     galleryItems.forEach(item => {
-        item.classList.remove("hide")
-        if ((categ != "all") && (!item.dataset.categorie.includes(categ))) item.classList.add("hide")
+        if ((categ != "all") && (!item.dataset.categorie.includes(categ))) {
+            item.classList.add("hide")
+        } else {
+            item.classList.remove("hide")
+        }
     })
 }
 

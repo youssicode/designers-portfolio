@@ -1,3 +1,12 @@
+section#video .video-banner h4, section#design .our-design h4, #home .intro-slider .slides-wrapper .slide h4 {
+  font-size: 28px;
+  font-weight: 400;
+  color: whitesmoke;
+  text-transform: capitalize;
+  line-height: 1.5;
+  margin-top: 0;
+}
+
 section#portfolio nav ul, #home .intro-slider .slides-wrapper, #home .container > div nav, #home .container > div {
   display: flex;
   align-items: center;
@@ -27,11 +36,13 @@ body {
   padding-left: 15px;
   padding-right: 15px;
   width: 100%;
+  display: block;
   margin-left: auto;
   margin-right: auto;
 }
 
 section {
+  overflow: hidden;
   padding: 70px 0;
 }
 section:nth-child(2n+1) {
@@ -66,7 +77,9 @@ section header span.line .circle {
   border-radius: 50%;
   position: absolute;
   top: 50%;
+  bottom: 0;
   left: 50%;
+  right: 0;
   transform: translate(-50%, -50%);
 }
 section header p {
@@ -222,13 +235,6 @@ section header p {
   padding: 30px 50px;
   color: white;
 }
-#home .intro-slider .slides-wrapper .slide h1 {
-  font-size: 28px;
-  font-weight: 500;
-  text-transform: capitalize;
-  line-height: 1.5;
-  margin-top: 0;
-}
 #home .intro-slider .slides-wrapper .slide p {
   line-height: 2;
 }
@@ -354,7 +360,9 @@ section#design {
 section#design .overlay {
   position: absolute;
   top: 0;
+  bottom: auto;
   left: 0;
+  right: auto;
   transform: translate(-50%, -50%);
   right: 0;
   bottom: 0;
@@ -369,13 +377,6 @@ section#design .our-design {
   background-color: rgba(25, 200, 250, 0.3);
   padding: 30px 50px;
   color: whitesmoke;
-}
-section#design .our-design h1 {
-  font-size: 28px;
-  font-weight: 500;
-  text-transform: capitalize;
-  line-height: 1.5;
-  margin-top: 0;
 }
 section#design .our-design ul {
   margin-top: 50px;
@@ -396,7 +397,9 @@ section#design .our-design ul li i {
     display: initial;
     position: absolute;
     top: 75%;
+    bottom: auto;
     left: 25%;
+    right: auto;
     transform: translate(-50%, -50%);
   }
   section#design .our-design {
@@ -482,6 +485,63 @@ section#portfolio button.more-items {
   margin-right: auto;
   margin-top: 30px;
   cursor: pointer;
+}
+
+section#video {
+  position: relative;
+  padding: 0;
+}
+section#video video {
+  width: 100%;
+}
+section#video .overlay {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  transform: translate(-50%, -50%);
+  transform: none;
+  background-color: rgba(0, 0, 0, 0.5);
+}
+section#video .video-banner {
+  width: 100%;
+  text-align: center;
+  background-color: rgba(25, 200, 250, 0.3);
+  position: absolute;
+  top: 50%;
+  bottom: auto;
+  left: 50%;
+  right: auto;
+  transform: translate(-50%, -50%);
+}
+section#video .video-banner h4 {
+  margin: 4%;
+}
+section#video .video-banner p {
+  font-size: 18px;
+  color: whitesmoke;
+  text-transform: capitalize;
+  font-weight: normal;
+}
+section#video .video-banner button {
+  border: none;
+  background-color: black;
+  color: whitesmoke;
+  font-size: 18px;
+  padding: 10px 20px;
+  margin-top: 1%;
+  margin-bottom: 4%;
+}
+
+section#about {
+  padding-bottom: 0;
+  text-align: center;
+}
+section#about img {
+  width: clamp(300px, 90%, 990px);
+  margin-bottom: -6%;
+  margin-top: 5%;
 }
 
 @media (min-width: 768px) {

@@ -1,0 +1,35 @@
+section#video {
+    position: relative;
+    padding: 0;
+    video{
+        width: 100%;
+    }
+    .overlay {
+        @include overlay();
+    }
+    .video-banner {
+        width: 100%;
+        text-align: center;
+        background-color: $main-color-trans;
+        @include absolute-positioning(50%,50%,auto,auto);
+        h4 {
+            @extend %h4-style;
+            margin: 4%; // the Parent's height change, so better use % instead of px
+        }
+        p {
+            font-size: 18px;
+            color: whitesmoke;
+            text-transform: capitalize;
+            font-weight: normal;
+        }
+        button {
+            border: none;
+            background-color: black;
+            color: whitesmoke;
+            font-size: 18px;
+            padding: 10px 20px;
+            margin-top: 1%;
+            margin-bottom: 4%;
+        }
+    }
+}

@@ -5,7 +5,7 @@ section#design {
     position: relative;
     overflow: hidden;
     .overlay {
-        @include absolute-positioning(0,0);
+        @include absolute-positioning(0,0,auto,auto);
         right: 0;
         bottom: 0;
         transform: none;
@@ -19,12 +19,8 @@ section#design {
         background-color: $main-color-trans;
         padding: $md $l;
         color: whitesmoke;
-        h1 {
-            font-size: 28px;
-            font-weight: 500;
-            text-transform: capitalize;
-            line-height: 1.5;
-            margin-top: 0;
+        h4 {
+            @extend %h4-style;
         }
         ul {
             margin-top: $l;
@@ -48,7 +44,7 @@ section#design {
     section#design {
         img.mobile-pic {
             display: initial;
-            @include absolute-positioning(75%,25%)
+            @include absolute-positioning(75%,25%,auto,auto)
         }
         .our-design {
             left: 50%;
