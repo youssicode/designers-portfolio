@@ -24,6 +24,11 @@ section {
     &:nth-child(2n+1) {
         background-color: $main-color;
     }
+    .overlay {
+        @include absolute-positioning(0,0,0,0);
+        transform: none;
+        background-color: $overlay;
+    }
     header {
         text-align: center;
         margin-bottom: $xl;
@@ -60,15 +65,16 @@ section {
     }
 }
 
-//* Landing Section Styles
+//* Specific Sections Styles
 @import "home";
 @import "services";
 @import "design";
 @import "portfolio";
 @import "videoSection";
 @import "about";
+// @import "statistics";
 
-//* Media Queries
+//* Global Media Queries
 @media (min-width: 768px) {
     html {
         font-size: 16px;

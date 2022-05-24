@@ -48,6 +48,16 @@ section {
 section:nth-child(2n+1) {
   background-color: #19c8fa;
 }
+section .overlay {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  transform: translate(-50%, -50%);
+  transform: none;
+  background-color: rgba(0, 0, 0, 0.5);
+}
 section header {
   text-align: center;
   margin-bottom: 70px;
@@ -92,8 +102,7 @@ section header p {
 #home {
   height: 100vh;
   background-color: #223f42;
-  background-image: url(../images/landing.jpg);
-  background-repeat: no-repeat;
+  background-image: url("../images/landing.jpg");
   background-size: cover;
   background-blend-mode: soft-light;
   position: relative;
@@ -240,9 +249,11 @@ section header p {
 }
 #home .slider-pos {
   position: absolute;
-  bottom: 30px;
+  top: auto;
+  bottom: 15px;
   left: 50%;
-  transform: translateX(-50%);
+  right: auto;
+  transform: translate(-50%, -50%);
 }
 #home .slider-pos span {
   display: inline-block;
@@ -352,22 +363,9 @@ section#services .container .service h3 {
   }
 }
 section#design {
-  background-image: url(../images/design-features.jpg);
+  background-image: url("../images/design-features.jpg");
   background-size: cover;
   position: relative;
-  overflow: hidden;
-}
-section#design .overlay {
-  position: absolute;
-  top: 0;
-  bottom: auto;
-  left: 0;
-  right: auto;
-  transform: translate(-50%, -50%);
-  right: 0;
-  bottom: 0;
-  transform: none;
-  background-color: rgba(0, 0, 0, 0.5);
 }
 section#design img.mobile-pic {
   display: none;
@@ -494,16 +492,6 @@ section#video {
 section#video video {
   width: 100%;
 }
-section#video .overlay {
-  position: absolute;
-  top: 0;
-  bottom: 0;
-  left: 0;
-  right: 0;
-  transform: translate(-50%, -50%);
-  transform: none;
-  background-color: rgba(0, 0, 0, 0.5);
-}
 section#video .video-banner {
   width: 100%;
   text-align: center;
@@ -538,12 +526,121 @@ section#about {
   padding-bottom: 0;
   text-align: center;
 }
-section#about img {
+section#about .about-img-holder {
+  overflow: hidden;
+}
+section#about .about-img-holder img {
   width: clamp(300px, 90%, 990px);
-  margin-bottom: -6%;
+  margin-bottom: -7%;
   margin-top: 5%;
 }
+section#about section.statistics {
+  background-image: url("../images/stats.png");
+  background-size: cover;
+  position: relative;
+}
+section#about section.statistics .stats-Wrapper {
+  background-color: rgba(25, 200, 250, 0.8);
+}
+section#about section.statistics .stats-Wrapper .stat-card {
+  position: relative;
+  padding: 30px;
+  color: whitesmoke;
+  text-align: center;
+}
+section#about section.statistics .stats-Wrapper .stat-card .icon i {
+  font-size: 18px;
+  background-color: black;
+  padding: 10px;
+  border-radius: 50%;
+}
+section#about section.statistics .stats-Wrapper .stat-card h2 {
+  font-size: 50px;
+}
+section#about header h2 {
+  font-size: 20px;
+}
+section#about header p {
+  font-size: 16px;
+}
+section#about .testimonials-slider {
+  overflow: hidden;
+}
+section#about .testimonials-slider .testimo-slide {
+  width: 200%;
+  display: flex;
+}
+section#about .testimonials-slider .testimo-slide .testimo-part {
+  width: 100%;
+}
+section#about .testimonials-slider .testimo-slide .testimo {
+  padding: 0 15px;
+  text-align: center;
+}
+section#about .testimonials-slider .testimo-slide .testimo .photo-profile {
+  padding: 15px;
+}
+section#about .testimonials-slider .testimo-slide .testimo .photo-profile img {
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+}
+section#about .testimonials-slider .testimo-slide .testimo .testimo-quote {
+  font-size: 16px;
+  margin-bottom: 30px;
+}
+section#about .testimonials-slider .testimo-slide .testimo .testimo-quote span.name {
+  display: block;
+  color: #777;
+  text-align: right;
+  border-bottom: 1px solid #777;
+  padding-bottom: 15px;
+}
+section#about .testimos-slider-pos {
+  margin: 30px auto;
+}
+section#about .testimos-slider-pos span {
+  display: inline-block;
+  width: 20px;
+  height: 20px;
+  border: 2px solid #777;
+  border-radius: 50%;
+  margin: 5px;
+  cursor: pointer;
+}
+section#about .testimos-slider-pos span.active {
+  background-color: #19c8fa;
+}
 
+@media (min-width: 650px) {
+  section#about section.statistics .stats-Wrapper {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-gap: 30px;
+  }
+  section#about .testimo {
+    display: flex;
+  }
+  section#about .testimo .photo-profile {
+    margin-right: 15px;
+  }
+  section#about .testimo .testimo-quote p {
+    text-align: left;
+  }
+}
+@media (min-width: 992px) {
+  section#about section.statistics .stats-Wrapper {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-gap: 30px;
+  }
+  section#about section.testimos-and-skills .container {
+    display: flex;
+  }
+  section#about section.testimos-and-skills .container aside {
+    width: 50%;
+  }
+}
 @media (min-width: 768px) {
   html {
     font-size: 16px;

@@ -1,16 +1,7 @@
 
 section#design {
-    background-image: url(../images/design-features.jpg);
-    background-size: cover;
+    @include bg-image("../images/design-features.jpg");
     position: relative;
-    overflow: hidden;
-    .overlay {
-        @include absolute-positioning(0,0,auto,auto);
-        right: 0;
-        bottom: 0;
-        transform: none;
-        background-color: $overlay;
-    }
     img.mobile-pic {
         display: none;
     }

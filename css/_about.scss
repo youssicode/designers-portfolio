@@ -1,11 +1,133 @@
 section#about {
     padding-bottom: 0;
     text-align: center;
-    img {
-        width: clamp(300px,90%,990px);
-        margin-bottom: -6%;
-        margin-top: 5%;
+    .about-img-holder {
+        overflow: hidden;
+        img {
+            width: clamp(300px,90%,990px);
+            margin-bottom: -7%;
+            margin-top: 5%;
+        }
     }
 
+    section.statistics {
+        @include bg-image("../images/stats.png");
+        position: relative;
+        .stats-Wrapper {
+            background-color: $main-color-trans2;
+            .stat-card {
+                position: relative; // To avoid the .Overlay covering
+                padding: $md;
+                color: whitesmoke;
+                text-align: center;
+                .icon i {
+                    font-size: 18px;
+                    background-color: black;
+                    padding: 10px;
+                    border-radius: 50%;
+                }
+                h2 {
+                    font-size: 50px;
+                }
+            }
+        }
+        
+    }
+    // section.testimos-and-skills {
+        header {
+            h2 {
+                font-size: 20px;
+            }
+            p {
+                font-size: 16px;
+            }
+        }
+    .testimonials-slider {
+        overflow: hidden;
+        .testimo-slide {
+            width: 200%;
+            display: flex;
+            & .testimo-part {
+                width: 100%;
+            }
+            .testimo {
+                padding: 0 $sm;
+                text-align: center;
+                .photo-profile {
+                    padding: $sm;
+                    img {
+                        width: 100px;
+                        height: 100px;
+                        border-radius: 50%;
+                    }
+                }
+                .testimo-quote {
+                    font-size: 16px;
+                    margin-bottom: $md;
+                    span.name {
+                        display: block;
+                        color: $g-light;
+                        text-align: right;
+                        border-bottom: 1px solid $g-light;
+                        padding-bottom: $sm;
+                    }
+                }
+            }
+        }
+    }
+    .testimos-slider-pos {
+        margin: $md auto;
+        span {
+            display: inline-block;
+            @include circle(20px,$g-light);
+            margin: 5px;
+            cursor: pointer;
+            &.active {
+                background-color: $main-color;
+            }
+        }
+    }
+        
+}
+@media (min-width: 650px) { // Custom BreakPoint
+    section#about {
+        section.statistics {
+            .stats-Wrapper {
+                display: grid;
+                grid-template-columns: 1fr 1fr;
+                grid-gap: $md;
+            } 
+        }
+        .testimo {
+            display: flex;
+            .photo-profile {
+                margin-right: $sm;
+            }
+            .testimo-quote {
+                p {
+                    text-align: left;
+                }
+            }
+        }
+    }
+}
+@media (min-width: 992px) {
+    section#about {
+        section.statistics {
+            .stats-Wrapper {
+                display: grid;
+                grid-template-columns: repeat(4,1fr);
+                grid-gap: $md;
+            }
+        }
+        section.testimos-and-skills {
+            .container {
+                display: flex;
+                aside {
+                    width: 50%;
+                }
+            }
+        }
+    }
 }
 

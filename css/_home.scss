@@ -1,10 +1,8 @@
 #home {
     height: 100vh;
     background-color: #223f42;
-    background-image: url(../images/landing.jpg);
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-blend-mode: soft-light;
+    @include bg-image("../images/landing.jpg");
+    background-blend-mode: soft-light; // without using ".overlay" DIV
     position: relative;
     .container {
         position: relative;
@@ -158,10 +156,7 @@
         }
     }
     .slider-pos {
-        position: absolute;
-        bottom: 30px;
-        left: 50%;
-        transform: translateX(-50%);
+        @include absolute-positioning(auto,50%,15px,auto);
         span {
             display: inline-block;
             @include circle(25px,#fff);
