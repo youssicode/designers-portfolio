@@ -45,32 +45,54 @@ section#about {
     .testimonials-slider {
         overflow: hidden;
         .testimo-slide {
-            width: 200%;
             display: flex;
-            & .testimo-part {
-                width: 100%;
+            width: 400%;
+            opacity: 0;
+
+            &.transit {
+                transition: all 300ms ease-out;
             }
-            .testimo {
-                padding: 0 $sm;
-                text-align: center;
-                .photo-profile {
-                    padding: $sm;
-                    img {
-                        width: 100px;
-                        height: 100px;
-                        border-radius: 50%;
-                    }
+            &.position0 {
+                transform: translateX(0);
+                opacity: 1;
+            }
+            &.position1 {
+                opacity: 1;
+                transform: translateX(-25%);
+            }
+            &.position2 {
+                opacity: 1;
+                transform: translateX(-50%);
+            }
+            &.position3 {
+                opacity: 1;
+                transform: translateX(-75%);
+            }
+        }
+        & .testimo-part {
+            width: 100%;
+        }
+        .testimo {
+            padding: 0 $sm;
+            text-align: center;
+            height: 50%;
+            .photo-profile {
+                padding: $sm;
+                img {
+                    width: 100px;
+                    height: 100px;
+                    border-radius: 50%;
                 }
-                .testimo-quote {
-                    font-size: 16px;
-                    margin-bottom: $md;
-                    span.name {
-                        display: block;
-                        color: $g-light;
-                        text-align: right;
-                        border-bottom: 1px solid $g-light;
-                        padding-bottom: $sm;
-                    }
+            }
+            .testimo-quote {
+                font-size: 16px;
+                margin-bottom: $md;
+                span.name {
+                    display: block;
+                    color: $g-light;
+                    text-align: right;
+                    border-bottom: 1px solid $g-light;
+                    padding-bottom: $sm;
                 }
             }
         }

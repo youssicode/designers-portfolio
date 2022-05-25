@@ -37,8 +37,6 @@ function slidPrev() {
     currentSlide --
 }
 function homeSlideRender(position,btns) {
-    console.log(position)
-
     btns.forEach((el,indx) => indx != position? el.classList.remove("active") : el.classList.add("active")) // Remove the "active" class from the other buttons.
     slidesWrapper.classList.remove("active0","active1","active2")
     slidesWrapper.classList.add(`active${position}`)
@@ -99,8 +97,6 @@ function  sortItems(categ) {
         }
     })
 }
-
-
 // for (let i = startcounter; i < itemsNbr+1 ; i++) {
 //     let cloned = itemTemplate.content.cloneNode(true) // Remove ".content" if u clone ".gall-item" bloc directly (without using "template" Tag)
 //     cloned.querySelector(".gall-item").setAttribute("data-categorie", portfolioProjectsCategories[i-1]) 
@@ -109,3 +105,35 @@ function  sortItems(categ) {
 //     cloned.querySelector("img").src = imgSource
 //     portfolioGallery.appendChild(cloned)
 // }
+
+//* =========== Testimonials Slider ==============
+let slider = document.getElementsByClassName("testimo-slide")[0] // the first (and unique) element
+let slidePosition = 1
+let loopTestimosSliderId
+loopSlider()
+function loopSlider() {
+    loopTestimosSliderId = setInterval(() => {
+        renderSlide (slidePosition)
+        renderSliderNavBtns (slidePosition)
+        slidePosition == 0? slider.classList.remove("transit") : slider.classList.add("transit")
+        slidePosition = (slidePosition + 1) % 4
+    }, 2000);
+}
+
+let sliderNavBtn = document.querySelectorAll(".testimos-slider-pos span")
+sliderNavBtn.forEach((btn,i) => {
+    btn.addEventListener("click", () => {
+        clearInterval(loopTestimosSliderId)
+        renderSliderNavBtns (i)
+        renderSlide (i)        
+    })
+})
+
+function renderSlide (pos) {
+    slider.classList.remove("position0","position1","position2","position3")
+    slider.classList.add(`position${pos}`)
+}
+function renderSliderNavBtns (pos) {
+    sliderNavBtn.forEach(btn => btn.classList.remove("active"))
+    pos != 3? sliderNavBtn[pos].classList.add("active") : sliderNavBtn[0].classList.add("active")
+}
