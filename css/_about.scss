@@ -33,7 +33,10 @@ section#about {
         }
         
     }
-    // section.testimos-and-skills {
+    section.testimos-and-skills {
+        aside.testimonials-wrapper {
+            margin-bottom: $xl;
+        }
         header {
             h2 {
                 font-size: 20px;
@@ -42,74 +45,119 @@ section#about {
                 font-size: 16px;
             }
         }
-    .testimonials-slider {
-        overflow: hidden;
-        .testimo-slide {
-            display: flex;
-            width: 400%;
-            opacity: 0;
+        .testimonials-slider {
+            overflow: hidden;
+            .testimo-slide {
+                display: flex;
+                width: 400%;
+                opacity: 0;
 
-            &.transit {
-                transition: all 300ms ease-out;
-            }
-            &.position0 {
-                transform: translateX(0);
-                opacity: 1;
-            }
-            &.position1 {
-                opacity: 1;
-                transform: translateX(-25%);
-            }
-            &.position2 {
-                opacity: 1;
-                transform: translateX(-50%);
-            }
-            &.position3 {
-                opacity: 1;
-                transform: translateX(-75%);
-            }
-        }
-        & .testimo-part {
-            width: 100%;
-        }
-        .testimo {
-            padding: 0 $sm;
-            text-align: center;
-            height: 50%;
-            .photo-profile {
-                padding: $sm;
-                img {
-                    width: 100px;
-                    height: 100px;
-                    border-radius: 50%;
+                &.transit {
+                    transition: all 300ms ease-out;
+                }
+                &.position0 {
+                    transform: translateX(0);
+                    opacity: 1;
+                }
+                &.position1 {
+                    opacity: 1;
+                    transform: translateX(-25%);
+                }
+                &.position2 {
+                    opacity: 1;
+                    transform: translateX(-50%);
+                }
+                &.position3 {
+                    opacity: 1;
+                    transform: translateX(-75%);
                 }
             }
-            .testimo-quote {
-                font-size: 16px;
-                margin-bottom: $md;
-                span.name {
-                    display: block;
-                    color: $g-light;
-                    text-align: right;
-                    border-bottom: 1px solid $g-light;
-                    padding-bottom: $sm;
+            & .testimo-part {
+                width: 100%;
+            }
+            .testimo {
+                padding: 0 $sm;
+                text-align: center;
+                height: 50%;
+                .photo-profile {
+                    padding: $sm;
+                    img {
+                        width: 100px;
+                        height: 100px;
+                        border-radius: 50%;
+                    }
+                }
+                .testimo-quote {
+                    font-size: 16px;
+                    margin-bottom: $md;
+                    span.name {
+                        display: block;
+                        color: $g-light;
+                        text-align: right;
+                        border-bottom: 1px solid $g-light;
+                        padding-bottom: $sm;
+                    }
                 }
             }
         }
-    }
-    .testimos-slider-pos {
-        margin: $md auto;
-        span {
-            display: inline-block;
-            @include circle(20px,$g-light);
-            margin: 5px;
-            cursor: pointer;
-            &.active {
-                background-color: $main-color;
+        .testimos-slider-pos {
+            margin: $md auto;
+            span {
+                display: inline-block;
+                @include circle(20px,$g-light);
+                margin: 5px;
+                cursor: pointer;
+                &.active {
+                    background-color: $main-color;
+                }
             }
         }
-    }
-        
+        aside.skills-wrapper {
+            .skills-techs {
+                text-align: left;
+                font-size: 18px;
+                &> div {
+                    margin-bottom: calc($md + 10px);
+                    label {
+                        text-transform: uppercase;
+                    }
+                    .progress-bar {
+                        margin-top: $sm;
+                        height: 30px;
+                        border-radius: 5px;
+                        background-color: whitesmoke;
+                        box-shadow: 2px 3px 5px rgb(0,0,0, .5) inset;
+                        
+                        .prog-value-bar {
+                            height: 100%;
+                            background-color: $main-color;
+                            border-top-left-radius: 5px;
+                            border-bottom-left-radius: 5px;
+                            position: relative;
+                            &::before {
+                                content: attr(data-progress);
+                                @include absolute-positioning(-150%,auto,auto,0);
+                                transform: translate(50%, 0);
+                                background-color: $g-dark;
+                                color: whitesmoke;
+                                border-radius: 5px;
+                                padding: 5px;
+                            }
+                          
+                            &::after {
+                                content: "";
+                                position: absolute;
+                                top: -50%;
+                                right: -10px;
+                                border: 10px solid transparent;
+                                border-top-color: $g-dark;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }  
 }
 @media (min-width: 650px) { // Custom BreakPoint
     section#about {
@@ -145,8 +193,10 @@ section#about {
         section.testimos-and-skills {
             .container {
                 display: flex;
+                gap: $l;
                 aside {
                     width: 50%;
+                    margin-bottom: 0;
                 }
             }
         }

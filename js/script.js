@@ -27,7 +27,8 @@ function slidNext() {
     // ==== To Prevent loop sliding ===
     if (currentSlide == 2) return
     homeSlideRender( currentSlide + 1 ,slidersPosBtns)
-    currentSlide = (currentSlide + 1) % slidersPosBtns.length
+    currentSlide ++
+    // currentSlide = (currentSlide + 1) % slidersPosBtns.length // To use without "if statment" if sliding continualy
 }
 function slidPrev() {
     // if (currentSlide == 0) currentSlide = 3
@@ -35,6 +36,7 @@ function slidPrev() {
     if (currentSlide == 0) return 
     homeSlideRender(currentSlide - 1 ,slidersPosBtns)
     currentSlide --
+    // currentSlide = (currentSlide - 1 + slidersPosBtns.length) % slidersPosBtns.length // To use without "if statment" if sliding continualy
 }
 function homeSlideRender(position,btns) {
     btns.forEach((el,indx) => indx != position? el.classList.remove("active") : el.classList.add("active")) // Remove the "active" class from the other buttons.
@@ -110,6 +112,7 @@ function  sortItems(categ) {
 let slider = document.getElementsByClassName("testimo-slide")[0] // the first (and unique) element
 let slidePosition = 1
 let loopTestimosSliderId
+// Automaticaly Run Slider
 loopSlider()
 function loopSlider() {
     loopTestimosSliderId = setInterval(() => {
@@ -117,9 +120,17 @@ function loopSlider() {
         renderSliderNavBtns (slidePosition)
         slidePosition == 0? slider.classList.remove("transit") : slider.classList.add("transit")
         slidePosition = (slidePosition + 1) % 4
-    }, 2000);
+    }, 4000);
 }
 
+// Stop Sliding when The pointer is over a testimonial
+let testimoSlidesWrapper = document.querySelector(".testimonials-slider")
+testimoSlidesWrapper.addEventListener("mouseover", function () {
+    clearInterval(loopTestimosSliderId) 
+})
+testimoSlidesWrapper.addEventListener("mouseleave", loopSlider) 
+
+// Navigate betweensliders using the buttons
 let sliderNavBtn = document.querySelectorAll(".testimos-slider-pos span")
 sliderNavBtn.forEach((btn,i) => {
     btn.addEventListener("click", () => {
