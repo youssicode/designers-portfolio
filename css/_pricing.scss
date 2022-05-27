@@ -1,0 +1,72 @@
+section#pricing {
+    .container {
+        @extend %flex;
+        flex-wrap: wrap;
+        gap: $md;
+        .price-card {
+            flex: 1 1 300px;
+            background-color: $white-s;
+            text-align: center;
+            border-top: 1px solid $main-color;
+            border-bottom: 1px solid $main-color;
+            margin-bottom: $md;
+            .title {
+                font-size: 20px;
+                text-transform: uppercase;
+                padding: $md
+            }
+            .price-holder {
+                @extend %flex;
+                align-items: flex-end;
+                padding-top: $sm;
+                padding-bottom: $l;
+                // height: 60px;
+                .dollar {
+                    align-self: flex-start;
+                    font-size: 24px;
+                }
+                .price-nbr {
+                    font-size: 54px;
+                    font-weight: 700;
+                    margin-left: $sm;
+                    margin-right: $sm;
+                }
+                .periode {
+                    font-size: 20px;
+                    font-weight: 700;
+                    
+                }
+                
+            }
+            .price-features {
+                border-top: 1px solid $main-color;
+                border-bottom: 1px solid $main-color;
+                .feature {
+                    font-size: 18px;
+                    padding: $sm;
+                    width: max-content;
+                    @include margin-centering(block);
+                    &:not(:last-child) {
+                        border-bottom: 1px solid $main-color;
+                    }
+                }
+            }
+            button.bay {
+                font-size: 18px;
+                padding: $sm;
+                border: 1px solid $main-color;
+                margin-top: $md;
+                margin-bottom: $md;
+                background-color: $main-color-trans;
+                cursor: pointer;
+                transition: all 300ms;
+                &:hover {
+                    background-color: $main-color;
+                    transform: rotate(-5deg);
+
+                }
+
+            }
+        }
+    }
+}

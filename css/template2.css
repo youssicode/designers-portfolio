@@ -7,7 +7,7 @@ section#video .video-banner h4, section#design .our-design h4, #home .intro-slid
   margin-top: 0;
 }
 
-section#about .quote-wrapper .container, section#portfolio nav ul, #home .intro-slider .slides-wrapper, #home .container > div nav, #home .container > div {
+section#pricing .container .price-card .price-holder, section#pricing .container, section#about .quote-wrapper .container, section#portfolio nav ul, #home .intro-slider .slides-wrapper, #home .container > div nav, #home .container > div {
   display: flex;
   align-items: center;
   justify-content: center;
@@ -55,9 +55,6 @@ body {
 section {
   overflow: hidden;
   padding: 70px 0;
-}
-section:nth-child(2n+1) {
-  background-color: #19c8fa;
 }
 section header {
   text-align: center;
@@ -374,7 +371,7 @@ section#design img.mobile-pic {
 section#design .our-design {
   position: relative;
   background-color: rgba(25, 200, 250, 0.3);
-  padding: 30px 50px;
+  padding: 30px 70px;
   color: whitesmoke;
 }
 section#design .our-design ul {
@@ -385,10 +382,12 @@ section#design .our-design ul li {
   font-size: 17px;
   margin-bottom: 30px;
   list-style: none;
+  text-indent: -26px;
+  padding-left: 26px;
 }
 section#design .our-design ul li i {
   font-size: medium;
-  padding-right: 30px;
+  padding-right: 22px;
 }
 
 @media (min-width: 768px) {
@@ -726,6 +725,74 @@ section#about .quote-wrapper .container cite {
     margin-bottom: 0;
   }
 }
+section#pricing .container {
+  flex-wrap: wrap;
+  gap: 30px;
+}
+section#pricing .container .price-card {
+  flex: 1 1 300px;
+  background-color: whitesmoke;
+  text-align: center;
+  border-top: 1px solid #19c8fa;
+  border-bottom: 1px solid #19c8fa;
+  margin-bottom: 30px;
+}
+section#pricing .container .price-card .title {
+  font-size: 20px;
+  text-transform: uppercase;
+  padding: 30px;
+}
+section#pricing .container .price-card .price-holder {
+  align-items: flex-end;
+  padding-top: 15px;
+  padding-bottom: 50px;
+}
+section#pricing .container .price-card .price-holder .dollar {
+  align-self: flex-start;
+  font-size: 24px;
+}
+section#pricing .container .price-card .price-holder .price-nbr {
+  font-size: 54px;
+  font-weight: 700;
+  margin-left: 15px;
+  margin-right: 15px;
+}
+section#pricing .container .price-card .price-holder .periode {
+  font-size: 20px;
+  font-weight: 700;
+}
+section#pricing .container .price-card .price-features {
+  border-top: 1px solid #19c8fa;
+  border-bottom: 1px solid #19c8fa;
+}
+section#pricing .container .price-card .price-features .feature {
+  font-size: 18px;
+  padding: 15px;
+  width: -webkit-max-content;
+  width: -moz-max-content;
+  width: max-content;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+section#pricing .container .price-card .price-features .feature:not(:last-child) {
+  border-bottom: 1px solid #19c8fa;
+}
+section#pricing .container .price-card button.bay {
+  font-size: 18px;
+  padding: 15px;
+  border: 1px solid #19c8fa;
+  margin-top: 30px;
+  margin-bottom: 30px;
+  background-color: rgba(25, 200, 250, 0.3);
+  cursor: pointer;
+  transition: all 300ms;
+}
+section#pricing .container .price-card button.bay:hover {
+  background-color: #19c8fa;
+  transform: rotate(-5deg);
+}
+
 @media (min-width: 768px) {
   html {
     font-size: 16px;

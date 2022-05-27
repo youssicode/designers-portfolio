@@ -8,7 +8,7 @@ section#design {
     .our-design {
         position: relative; // To avoid the overllay's darkness
         background-color: $main-color-trans;
-        padding: $md $l;
+        padding: $md $xl;
         color: whitesmoke;
         h4 {
             @extend %h4-style;
@@ -19,13 +19,13 @@ section#design {
             li {
                 i {
                     font-size:medium;
-                    padding-right: $md;
+                    padding-right: 22px;
                 }
                 font-size: 17px;
                 margin-bottom: $md;
                 list-style: none;
-
-
+                text-indent: -26px;
+                padding-left: 26px;
             }
         }
     }

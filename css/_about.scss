@@ -166,7 +166,7 @@ section#about {
             position: relative; 
             @extend %flex;
             flex-direction: column;
-            color: $white-s;
+            color: $white-s; // Affect both <q> & <cite>
             q {
                 font-size: 30px;
                 margin-bottom: $sm;

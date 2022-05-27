@@ -26,9 +26,9 @@ body {
 section {
     overflow: hidden;
     padding: $xl 0;
-    &:nth-child(2n+1) {
-        background-color: $main-color;
-    }
+    // &:nth-child(2n+1) {
+    //     background-color: $main-color;
+    // }
     header {
         text-align: center;
         margin-bottom: $xl;
