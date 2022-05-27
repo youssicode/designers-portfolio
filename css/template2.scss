@@ -18,16 +18,16 @@ body {
     width: 100%;
     @include margin-centering(block);
 }
+.overlay {
+    @include absolute-positioning(0,0,0,0);
+    transform: none;
+    background-color: $overlay;
+}
 section {
     overflow: hidden;
     padding: $xl 0;
     &:nth-child(2n+1) {
         background-color: $main-color;
-    }
-    .overlay {
-        @include absolute-positioning(0,0,0,0);
-        transform: none;
-        background-color: $overlay;
     }
     header {
         text-align: center;
@@ -72,7 +72,7 @@ section {
 @import "portfolio";
 @import "videoSection";
 @import "about";
-// @import "statistics";
+@import "pricing";
 
 //* Global Media Queries
 @media (min-width: 768px) {

@@ -1,16 +1,14 @@
 section#portfolio {
     nav {
-        width: max-content;
-        @include margin-centering(block);
         margin-bottom: $l;
         ul {
             list-style: none;
+            padding-left: 0;
             @extend %flex;
             li {
                 font-size: 18px;
                 text-transform: capitalize;
                 padding: $sm;
-                margin-right: $sm;
                 cursor: pointer;
                 &.active {
                     background-color: $main-color;

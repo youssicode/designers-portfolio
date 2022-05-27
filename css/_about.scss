@@ -157,7 +157,25 @@ section#about {
                 }
             }
         }
-    }  
+    }
+    .quote-wrapper {
+        @include bg-image("../images/quote.jpg");
+        padding: $xxl $sm;
+        position: relative; // .overlay class is p. absolute
+        .container {
+            position: relative; 
+            @extend %flex;
+            flex-direction: column;
+            color: $white-s;
+            q {
+                font-size: 30px;
+                margin-bottom: $sm;
+            }    
+            cite {
+                font-size: 20px;
+            }    
+        }
+    }
 }
 @media (min-width: 650px) { // Custom BreakPoint
     section#about {

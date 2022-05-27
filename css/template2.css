@@ -7,7 +7,7 @@ section#video .video-banner h4, section#design .our-design h4, #home .intro-slid
   margin-top: 0;
 }
 
-section#portfolio nav ul, #home .intro-slider .slides-wrapper, #home .container > div nav, #home .container > div {
+section#about .quote-wrapper .container, section#portfolio nav ul, #home .intro-slider .slides-wrapper, #home .container > div nav, #home .container > div {
   display: flex;
   align-items: center;
   justify-content: center;
@@ -41,14 +41,7 @@ body {
   margin-right: auto;
 }
 
-section {
-  overflow: hidden;
-  padding: 70px 0;
-}
-section:nth-child(2n+1) {
-  background-color: #19c8fa;
-}
-section .overlay {
+.overlay {
   position: absolute;
   top: 0;
   bottom: 0;
@@ -56,7 +49,15 @@ section .overlay {
   right: 0;
   transform: translate(-50%, -50%);
   transform: none;
-  background-color: rgba(0, 0, 0, 0.5);
+  background-color: rgba(0, 0, 0, 0.6);
+}
+
+section {
+  overflow: hidden;
+  padding: 70px 0;
+}
+section:nth-child(2n+1) {
+  background-color: #19c8fa;
 }
 section header {
   text-align: center;
@@ -405,22 +406,16 @@ section#design .our-design ul li i {
   }
 }
 section#portfolio nav {
-  width: -webkit-max-content;
-  width: -moz-max-content;
-  width: max-content;
-  display: block;
-  margin-left: auto;
-  margin-right: auto;
   margin-bottom: 50px;
 }
 section#portfolio nav ul {
   list-style: none;
+  padding-left: 0;
 }
 section#portfolio nav ul li {
   font-size: 18px;
   text-transform: capitalize;
   padding: 15px;
-  margin-right: 15px;
   cursor: pointer;
 }
 section#portfolio nav ul li.active {
@@ -680,6 +675,24 @@ section#about section.testimos-and-skills aside.skills-wrapper .skills-techs > d
   right: -10px;
   border: 10px solid transparent;
   border-top-color: #333;
+}
+section#about .quote-wrapper {
+  background-image: url("../images/quote.jpg");
+  background-size: cover;
+  padding: 90px 15px;
+  position: relative;
+}
+section#about .quote-wrapper .container {
+  position: relative;
+  flex-direction: column;
+  color: whitesmoke;
+}
+section#about .quote-wrapper .container q {
+  font-size: 30px;
+  margin-bottom: 15px;
+}
+section#about .quote-wrapper .container cite {
+  font-size: 20px;
 }
 
 @media (min-width: 650px) {
