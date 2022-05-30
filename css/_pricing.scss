@@ -1,10 +1,9 @@
 section#pricing {
     .container {
-        @extend %flex;
-        flex-wrap: wrap;
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
         gap: $md;
         .price-card {
-            flex: 1 1 300px;
             background-color: $white-s;
             text-align: center;
             border-top: 1px solid $main-color;
@@ -52,21 +51,41 @@ section#pricing {
                 }
             }
             button.bay {
-                font-size: 18px;
-                padding: $sm;
+                @extend %button-style;
                 border: 1px solid $main-color;
+                background-color: $main-color-trans;
+                color: black;
                 margin-top: $md;
                 margin-bottom: $md;
-                background-color: $main-color-trans;
-                cursor: pointer;
                 transition: all 300ms;
                 &:hover {
                     background-color: $main-color;
                     transform: rotate(-5deg);
-
                 }
 
             }
         }
     }
+    .contact-us {
+        font-size: 18px;
+        text-align: center;
+        p {
+            margin-bottom: $l;
+
+        }
+        .button {
+            @extend %button-style;
+        }
+    }
 }
+
+@media (min-width: 992px) and (max-width:1199px) {
+    .price-card-for-layout {
+        display: block !important; // display:none in the inline style.
+    }
+}
+// @media (min-width: 1200px) {
+//     .price-card-for-layout {
+//         display: initial; // display:none in the inline style.
+//     }
+// }

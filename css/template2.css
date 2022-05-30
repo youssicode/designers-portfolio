@@ -7,7 +7,7 @@ section#video .video-banner h4, section#design .our-design h4, #home .intro-slid
   margin-top: 0;
 }
 
-section#pricing .container .price-card .price-holder, section#pricing .container, section#about .quote-wrapper .container, section#portfolio nav ul, #home .intro-slider .slides-wrapper, #home .container > div nav, #home .container > div {
+section#pricing .container .price-card .price-holder, section#about .quote-wrapper .container, section#portfolio nav ul, #home .intro-slider .slides-wrapper, #home .container > div nav, #home .container > div, section#subscribe .container form[name=subscribe], section#subscribe .container {
   display: flex;
   align-items: center;
   justify-content: center;
@@ -20,6 +20,68 @@ section#services .container .service p, section header p {
   color: #777;
 }
 
+section#pricing .contact-us .button, section#pricing .container .price-card button.bay, section#portfolio button.more-items, section#subscribe .container form[name=subscribe] button[type=submit] {
+  border: none;
+  text-decoration: none;
+  text-transform: uppercase;
+  background-color: #19c8fa;
+  box-shadow: 2px 2px 5px #777;
+  color: whitesmoke;
+  padding: 15px 30px;
+}
+
+section#subscribe {
+  background-image: url("../images/subscribe.jpg");
+  background-size: cover;
+  color: whitesmoke;
+}
+section#subscribe .container {
+  gap: 30px;
+  flex-direction: column;
+}
+section#subscribe .container form[name=subscribe] {
+  width: 500px;
+  max-width: 100%;
+  border: 2px solid #fff;
+  justify-content: space-between;
+  padding-left: 50px;
+  position: relative;
+}
+section#subscribe .container form[name=subscribe] i {
+  position: absolute;
+  left: 15px;
+}
+section#subscribe .container form[name=subscribe] input[type=email] {
+  width: calc(100% - 150px);
+  background: none;
+  border: none;
+  outline: none;
+  caret-color: #19c8fa;
+}
+section#subscribe .container form[name=subscribe] input[type=email]::-moz-placeholder {
+  color: whitesmoke;
+}
+section#subscribe .container form[name=subscribe] input[type=email]:-ms-input-placeholder {
+  color: whitesmoke;
+}
+section#subscribe .container form[name=subscribe] input[type=email]::placeholder {
+  color: whitesmoke;
+}
+section#subscribe .container form[name=subscribe] button[type=submit] {
+  width: 150px;
+}
+section#subscribe .container p {
+  font-size: 120%;
+}
+
+@media (min-width: 992px) {
+  section#subscribe .container {
+    flex-direction: row;
+  }
+  section#subscribe .container p {
+    width: 50%;
+  }
+}
 html {
   font-size: 14px;
 }
@@ -463,15 +525,7 @@ section#portfolio .gallery .gall-item .gall-item-caption p:last-child {
   color: #19c8fa;
 }
 section#portfolio button.more-items {
-  border: none;
-  box-shadow: 2px 2px 5px #777;
   border-radius: 5px;
-  font-size: 18px;
-  font-weight: 600;
-  letter-spacing: 1.3px;
-  color: whitesmoke;
-  background-color: #19c8fa;
-  padding: 15px 30px;
   display: block;
   margin-left: auto;
   margin-right: auto;
@@ -726,11 +780,11 @@ section#about .quote-wrapper .container cite {
   }
 }
 section#pricing .container {
-  flex-wrap: wrap;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
   gap: 30px;
 }
 section#pricing .container .price-card {
-  flex: 1 1 300px;
   background-color: whitesmoke;
   text-align: center;
   border-top: 1px solid #19c8fa;
@@ -779,20 +833,29 @@ section#pricing .container .price-card .price-features .feature:not(:last-child)
   border-bottom: 1px solid #19c8fa;
 }
 section#pricing .container .price-card button.bay {
-  font-size: 18px;
-  padding: 15px;
   border: 1px solid #19c8fa;
+  background-color: rgba(25, 200, 250, 0.3);
+  color: black;
   margin-top: 30px;
   margin-bottom: 30px;
-  background-color: rgba(25, 200, 250, 0.3);
-  cursor: pointer;
   transition: all 300ms;
 }
 section#pricing .container .price-card button.bay:hover {
   background-color: #19c8fa;
   transform: rotate(-5deg);
 }
-
+section#pricing .contact-us {
+  font-size: 18px;
+  text-align: center;
+}
+section#pricing .contact-us p {
+  margin-bottom: 50px;
+}
+@media (min-width: 992px) and (max-width: 1199px) {
+  .price-card-for-layout {
+    display: block !important;
+  }
+}
 @media (min-width: 768px) {
   html {
     font-size: 16px;

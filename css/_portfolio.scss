@@ -59,15 +59,8 @@ section#portfolio {
         }
     }
     button.more-items {
-        border: none;
-        box-shadow: 2px 2px 5px $g-light;
+        @extend %button-style;
         border-radius: 5px;
-        font-size: 18px;
-        font-weight: 600;
-        letter-spacing: 1.3px;
-        color: whitesmoke;
-        background-color: $main-color;
-        padding: $sm $md;
         // use @mixin marginCentering
         display: block;
         margin-left: auto;

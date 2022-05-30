@@ -1,0 +1,50 @@
+section#subscribe {
+    @include bg-image("../images/subscribe.jpg");
+    color: $white-s;
+    .container {
+        @extend %flex;
+        gap: $md;
+        flex-direction: column; // Mobile-first Design
+        form[name=subscribe] {
+            width: 500px; 
+            max-width: 100%;
+            border: 2px solid #fff;
+            @extend %flex;
+            justify-content: space-between;
+            padding-left: $l;
+            position: relative;
+                i{
+                    position: absolute;
+                    left: $sm;
+                }
+                input[type=email] {
+                    width: calc(100% - 150px); // To be flexible at smaller screens,All the "form"'s width mines the button's width
+                    background: none;
+                    border: none;
+                    outline: none;
+                    caret-color: $main-color;
+                    &::placeholder {
+                        color: $white-s;
+                    }
+                } 
+                button[type=submit] {
+                    @extend %button-style;
+                    width: 150px;                                        
+                }
+        }
+        p {
+            font-size: 120%;
+        }
+        
+    }
+}
+@media (min-width: 992px) {
+    section#subscribe {
+        .container {
+            flex-direction: row;
+            p {
+                width: 50%;
+            }
+        }
+    }
+}

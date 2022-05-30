@@ -7,7 +7,7 @@
 %h4-style {
     font-size: 28px;
     font-weight: 400;
-    color: whitesmoke;
+    color: $white-s;
     text-transform: capitalize;
     line-height: 1.5;
     margin-top: 0;
@@ -23,7 +23,16 @@
     line-height: 1.8;
     color: $g-light;
 }
+%button-style {
+    border: none;
+    text-decoration: none;
+    text-transform: uppercase;
+    background-color: $main-color;
+    box-shadow: 2px 2px 5px $g-light;
+    color: $white-s;
+    padding: $sm $md;
 
+}
 @mixin bg-image($src) {
     background-image: url($src);
     background-size: cover;
