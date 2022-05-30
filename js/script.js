@@ -148,3 +148,13 @@ function renderSliderNavBtns (pos) {
     sliderNavBtn.forEach(btn => btn.classList.remove("active"))
     pos != 3? sliderNavBtn[pos].classList.add("active") : sliderNavBtn[0].classList.add("active")
 }
+
+// Centering the price-card's Orphen Item
+const priceCards = document.getElementsByClassName("price-card")
+const priceCardLayout = document.createElement("DIV")
+priceCardLayout.classList.add("price-card-for-layout")
+priceCardLayout.style.display = "none"
+
+window.onresize = function () {
+    window.innerWidth > 992? priceCards[2].after(priceCardLayout) : priceCardLayout.remove()        
+}
