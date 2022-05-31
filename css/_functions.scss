@@ -29,9 +29,9 @@
     text-transform: uppercase;
     background-color: $main-color;
     box-shadow: 2px 2px 5px $g-light;
-    color: $white-s;
+    color: #fff;
     padding: $sm $md;
-
+    cursor: pointer;
 }
 @mixin bg-image($src) {
     background-image: url($src);

@@ -23,6 +23,7 @@ section#subscribe {
                     border: none;
                     outline: none;
                     caret-color: $main-color;
+                    color: $white-s;
                     &::placeholder {
                         color: $white-s;
                     }

@@ -61,12 +61,8 @@ section#portfolio {
     button.more-items {
         @extend %button-style;
         border-radius: 5px;
-        // use @mixin marginCentering
-        display: block;
-        margin-left: auto;
-        margin-right: auto;
+        @include margin-centering(block);
         margin-top: $md;
-        cursor: pointer;
     }
 }
 

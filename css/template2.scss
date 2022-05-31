@@ -1,6 +1,5 @@
 @import "variables";
 @import "functions";
-@import "subscribe";
 
 //* golbal styles
 
@@ -74,6 +73,8 @@ section {
 @import "videoSection";
 @import "about";
 @import "pricing";
+@import "subscribe";
+@import "contact";
 
 //* Global Media Queries
 @media (min-width: 768px) {
