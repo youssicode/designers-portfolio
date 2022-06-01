@@ -50,9 +50,15 @@
     margin-left: auto;
     margin-right: auto;
 }
-// @mixin overlay() {
-//     @include absolute-positioning(0,0,0,0);
-//     transform: none;
-//     background-color: $overlay;
-// }
 
+%after-overlay {
+    position: relative;
+    z-index: 0;
+    &::after {
+        content: "";
+        @include absolute-positioning(0,0,0,0);
+        transform: none;
+        background-color: $overlay;
+        z-index: -1;
+    }
+}

@@ -1,7 +1,10 @@
 section#subscribe {
+    position: relative; // To remove if using ::after
+    // @extend %after-overlay;
     @include bg-image("../images/subscribe.jpg");
     color: $white-s;
     .container {
+        position: relative; // To remove if using ::after
         @extend %flex;
         gap: $md;
         flex-direction: column; // Mobile-first Design

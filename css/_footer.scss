@@ -1,0 +1,39 @@
+section#footer {
+    @extend %after-overlay;
+    @include bg-image("../images/subscribe.jpg");
+    text-align: center;
+    color: $white-s;
+    h4 {
+        font-size: 22px;
+        font-weight: 400;
+        letter-spacing: 1.4px;
+        text-transform: uppercase;
+        margin-top: $l;
+        width: max-content;
+        @include margin-centering(block);
+        border-bottom: 1px solid #fff;
+        padding-bottom: $md;
+    }
+    // .social-icons {
+
+    // }
+    a {
+        font-size: 18px;
+        margin: $sm;
+        text-decoration: none;
+        color: $white-s;
+    }
+    footer {
+        margin-top: $l;
+        font-size: 16px;
+        line-height: 1.5;
+        a {
+            margin: 0;
+            text-decoration: underline;
+        }
+        span {
+            font-weight: 600;
+            color: $main-color
+        }
+    }
+}
