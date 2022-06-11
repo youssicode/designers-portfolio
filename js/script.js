@@ -14,6 +14,7 @@ let slidersPosBtns = document.querySelectorAll(".slider-pos span")
 slidersPosBtns.forEach((btn,index,btns) => {
     btn.addEventListener("click", ()=> {
         homeSlideRender(index,btns)
+        currentSlide = index
     })
 })
 
@@ -24,19 +25,14 @@ slideNext.addEventListener("click", slidNext)
 slidePrev.addEventListener("click", slidPrev)
 
 function slidNext() {
-    // ==== To Prevent loop sliding ===
     if (currentSlide == 2) return
     homeSlideRender( currentSlide + 1 ,slidersPosBtns)
     currentSlide ++
-    // currentSlide = (currentSlide + 1) % slidersPosBtns.length // To use without "if statment" if sliding continualy
 }
 function slidPrev() {
-    // if (currentSlide == 0) currentSlide = 3
-    // ==== To Prevent loop sliding ===
     if (currentSlide == 0) return 
     homeSlideRender(currentSlide - 1 ,slidersPosBtns)
     currentSlide --
-    // currentSlide = (currentSlide - 1 + slidersPosBtns.length) % slidersPosBtns.length // To use without "if statment" if sliding continualy
 }
 function homeSlideRender(position,btns) {
     btns.forEach((el,indx) => indx != position? el.classList.remove("active") : el.classList.add("active")) // Remove the "active" class from the other buttons.
