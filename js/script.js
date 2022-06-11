@@ -62,6 +62,7 @@ let moreBtn = document.querySelector(".more-items")
 moreBtn.onclick = ()=> {
     sortItems("all") // Display Initial Items befor Adding New Ones
     addItems()
+    activeBtn(sortBtns[0]) // "All" btn
     moreBtn.setAttribute("disabled", "")
 }
 function  addItems() {
@@ -87,6 +88,7 @@ let sortBtns = document.querySelectorAll("li[data-categorie]")
 sortBtns.forEach(btn => {
     btn.addEventListener("click", function() {
         sortItems(btn.dataset.categorie) 
+        activeBtn(this)
     })
 })
 function  sortItems(categ) {
@@ -99,6 +101,10 @@ function  sortItems(categ) {
         }
     })
 }
+function activeBtn(activBtn) {
+    document.querySelector("li[data-categorie].active").classList.remove("active")
+    activBtn.classList.add("active")
+}
 // for (let i = startcounter; i < itemsNbr+1 ; i++) {
 //     let cloned = itemTemplate.content.cloneNode(true) // Remove ".content" if u clone ".gall-item" bloc directly (without using "template" Tag)
 //     cloned.querySelector(".gall-item").setAttribute("data-categorie", portfolioProjectsCategories[i-1]) 
@@ -109,7 +115,7 @@ function  sortItems(categ) {
 // }
 
 //* =========== Testimonials Slider ==============
-let slider = document.getElementsByClassName("testimo-slide")[0] // the first (and unique) element
+let slider = document.querySelector(".testimo-slide")
 let slidePosition = 1
 let loopTestimosSliderId
 // Automaticaly Run Slider
@@ -120,7 +126,7 @@ function loopSlider() {
         renderSliderNavBtns (slidePosition)
         slidePosition == 0? slider.classList.remove("transit") : slider.classList.add("transit")
         slidePosition = (slidePosition + 1) % 4
-    }, 4000);
+    }, 2000);
 }
 
 // Stop Sliding when The pointer is over a testimonial

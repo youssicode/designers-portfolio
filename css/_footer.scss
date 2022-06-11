@@ -1,5 +1,10 @@
 section#footer {
-    @extend %after-overlay;
+    position: relative;
+    z-index: 0;
+    &::after {
+        @extend %after-overlay;
+        z-index: -1;
+    }
     @include bg-image("../images/subscribe.jpg");
     text-align: center;
     color: $white-s;

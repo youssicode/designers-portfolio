@@ -2,11 +2,15 @@
 section#design {
     @include bg-image("../images/design-features.jpg");
     position: relative;
+    z-index: 2;
+    &::after {
+        @extend %after-overlay;
+        z-index: -1;
+    }
     img.mobile-pic {
         display: none;
     }
     .our-design {
-        position: relative; // To avoid the overllay's darkness
         background-color: $main-color-trans;
         padding: $md $xl;
         color: whitesmoke;
@@ -38,7 +42,7 @@ section#design {
             @include absolute-positioning(75%,25%,auto,auto)
         }
         .our-design {
-            left: 50%;
+            margin-left: 50%;
             }
         }
 }

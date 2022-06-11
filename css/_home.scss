@@ -2,6 +2,7 @@
     height: 100vh;
     background-color: #223f42;
     @include bg-image("../images/landing.jpg");
+    background-position-x: center;
     background-blend-mode: soft-light; // without using ".overlay" DIV
     position: relative;
     .container {
@@ -44,7 +45,7 @@
                     left: 0;
                     list-style: none;
                     width: 100vw;
-                    background-color: rgb(0,0,0,0.5);
+                    background-color: rgb(0,0,0,0.8);
                     margin: 0;
                     padding: 0;
                     z-index: 1;
@@ -148,6 +149,7 @@
                 color: white;
                 h4 {
                     @extend %h4-style;
+                    font-size: 22px;
                 }
                 p {
                     line-height: 2;
@@ -197,6 +199,9 @@
             .slides-wrapper {
                 .slide {
                     padding: $l $xl;
+                    h4 {
+                        font-size: 28px;
+                    }
                 }
             }
         } 
@@ -245,7 +250,7 @@
             width: 50%;
             .slides-wrapper {
                 .slide {
-                    padding-left: calc((100vw - 1170px)/2);
+                    padding-left: calc((min(100vw, 1800px) - 1170px)/2);
                 }
             }
         }

@@ -31,11 +31,7 @@ section#contact form[name=contact-us] button[type=submit], section#subscribe .co
   cursor: pointer;
 }
 
-section#footer {
-  position: relative;
-  z-index: 0;
-}
-section#footer::after {
+section#footer::after, section#subscribe::after, section#about .quote-wrapper::after, section#about section.statistics::after, section#video::after, section#design::after {
   content: "";
   position: absolute;
   top: 0;
@@ -45,11 +41,11 @@ section#footer::after {
   transform: translate(-50%, -50%);
   transform: none;
   background-color: rgba(0, 0, 0, 0.6);
-  z-index: -1;
 }
 
 html {
   font-size: 14px;
+  scroll-behavior: smooth;
 }
 
 * {
@@ -58,6 +54,15 @@ html {
 
 body {
   font-family: "Open Sans", sans-serif;
+  background-color: #000;
+}
+
+.body-container {
+  background-color: #fff;
+  max-width: 1800px;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 .container {
@@ -130,6 +135,7 @@ section header p {
   background-color: #223f42;
   background-image: url("../images/landing.jpg");
   background-size: cover;
+  background-position-x: center;
   background-blend-mode: soft-light;
   position: relative;
 }
@@ -171,7 +177,7 @@ section header p {
   left: 0;
   list-style: none;
   width: 100vw;
-  background-color: rgba(0, 0, 0, 0.5);
+  background-color: rgba(0, 0, 0, 0.8);
   margin: 0;
   padding: 0;
   z-index: 1;
@@ -270,6 +276,9 @@ section header p {
   padding: 30px 50px;
   color: white;
 }
+#home .intro-slider .slides-wrapper .slide h4 {
+  font-size: 22px;
+}
 #home .intro-slider .slides-wrapper .slide p {
   line-height: 2;
 }
@@ -319,6 +328,9 @@ section header p {
   #home .intro-slider .slides-wrapper .slide {
     padding: 50px 70px;
   }
+  #home .intro-slider .slides-wrapper .slide h4 {
+    font-size: 28px;
+  }
 }
 @media (min-width: 992px) {
   #home .container > div nav .burger {
@@ -355,7 +367,7 @@ section header p {
     width: 50%;
   }
   #home .intro-slider .slides-wrapper .slide {
-    padding-left: calc((100vw - 1170px) / 2);
+    padding-left: calc((min(100vw, 1800px) - 1170px) / 2);
   }
 }
 section#services .container .service {
@@ -392,12 +404,15 @@ section#design {
   background-image: url("../images/design-features.jpg");
   background-size: cover;
   position: relative;
+  z-index: 2;
+}
+section#design::after {
+  z-index: -1;
 }
 section#design img.mobile-pic {
   display: none;
 }
 section#design .our-design {
-  position: relative;
   background-color: rgba(25, 200, 250, 0.3);
   padding: 30px 70px;
   color: whitesmoke;
@@ -429,7 +444,7 @@ section#design .our-design ul li i {
     transform: translate(-50%, -50%);
   }
   section#design .our-design {
-    left: 50%;
+    margin-left: 50%;
   }
 }
 section#portfolio nav {
@@ -444,6 +459,7 @@ section#portfolio nav ul li {
   text-transform: capitalize;
   padding: 15px;
   cursor: pointer;
+  transition: all 400ms;
 }
 section#portfolio nav ul li.active {
   background-color: #19c8fa;
@@ -499,13 +515,17 @@ section#portfolio button.more-items {
 }
 
 section#video {
-  position: relative;
   padding: 0;
+  position: relative;
+}
+section#video::after {
+  z-index: 0;
 }
 section#video video {
   width: 100%;
 }
 section#video .video-banner {
+  z-index: 1;
   width: 100%;
   text-align: center;
   background-color: rgba(25, 200, 250, 0.3);
@@ -556,6 +576,7 @@ section#about section.statistics .stats-Wrapper {
   background-color: rgba(25, 200, 250, 0.8);
 }
 section#about section.statistics .stats-Wrapper .stat-card {
+  z-index: 1;
   position: relative;
   padding: 30px;
   color: whitesmoke;
@@ -699,9 +720,12 @@ section#about .quote-wrapper {
   background-size: cover;
   padding: 90px 15px;
   position: relative;
+  z-index: 0;
+}
+section#about .quote-wrapper::after {
+  z-index: -1;
 }
 section#about .quote-wrapper .container {
-  position: relative;
   flex-direction: column;
   color: whitesmoke;
 }
@@ -822,13 +846,16 @@ section#pricing .contact-us p {
   }
 }
 section#subscribe {
-  position: relative;
   background-image: url("../images/subscribe.jpg");
   background-size: cover;
   color: whitesmoke;
+  position: relative;
+  z-index: 0;
+}
+section#subscribe::after {
+  z-index: -1;
 }
 section#subscribe .container {
-  position: relative;
   gap: 30px;
   flex-direction: column;
 }
@@ -924,10 +951,15 @@ section#contact form[name=contact-us] button[type=submit] {
   }
 }
 section#footer {
+  position: relative;
+  z-index: 0;
   background-image: url("../images/subscribe.jpg");
   background-size: cover;
   text-align: center;
   color: whitesmoke;
+}
+section#footer::after {
+  z-index: -1;
 }
 section#footer h4 {
   font-size: 22px;

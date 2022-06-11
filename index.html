@@ -13,504 +13,501 @@
     <link rel="stylesheet" href="./css/template2.css">
 </head>
 <body>
-    <!--* start home section -->
-    <div id="home"> 
-        <div class="container">
-            <div>
-                <hr>
-                <img src="./images/logo.png" alt="kasper logo" class="logo">
-                <nav>
-                    <div class="burger">
-                        <span></span>
-                        <span></span>
-                        <span></span>
+    <div class="body-container">
+
+        <!--* start home section -->
+        <div id="home"> 
+            <div class="container">
+                <div>
+                    <hr>
+                    <img src="./images/logo.png" alt="kasper logo" class="logo">
+                    <nav>
+                        <div class="burger">
+                            <span></span>
+                            <span></span>
+                            <span></span>
+                        </div>
+                        <ul class="links">
+                            <li class="active"><a href="#home">home</a></li>
+                            <li><a href="#services">services</a></li>
+                            <li><a href="#portfolio">portfolio</a></li>
+                            <li><a href="#about">about</a></li>
+                            <li><a href="#pricing">pricing</a></li>
+                            <li><a href="#contact">contact</a></li>
+                        </ul>
+                        <!-- <div class="search-bar"> -->
+                            <form action="" name="searchBar">
+                                <input class="" type="text" name="search-field">
+                                <button class="search-btn" type="submit">
+                                    <i class="fas fa-search"></i>
+                                </button>
+                            </form>
+                        <!-- </div> -->
+                    </nav>
+                </div>
+            </div>
+            <div class="intro-slider">
+                <div class="slides-wrapper">
+                    <div class="slide">
+                        <h4>hello world!<br>
+                            we are kasper, we make art.
+                        </h4>
+                        <p>
+                            Curabitur arcu erat, accumsan id imperdiet et, porttitor at sem. Mauris blandit aliquet elit, eget tincidunt nibh pulvinar a. Curabitur aliquet quam. Accumsan id imperdiet et, porttitor at sem. Mauris blandit aliquet elit, eget tincidunt.
+                        </p>
                     </div>
-                    <ul class="links">
-                        <li class="active"><a href="#home">home</a></li>
-                        <li><a href="#services">services</a></li>
-                        <li><a href="#portfolio">portfolio</a></li>
-                        <li><a href="#about">about</a></li>
-                        <li><a href="#pricing">pricing</a></li>
-                        <li><a href="#contact">contact</a></li>
+                    <div class="slide">
+                        <h4>our gool!<br>
+                            satisfying your extreme imagination.
+                        </h4>
+                        <p>
+                            Curabitur arcu erat, accumsan id imperdiet et, porttitor at sem. Mauris blandit aliquet elit, eget tincidunt nibh pulvinar a. Curabitur aliquet quam. Accumsan id imperdiet et, porttitor at sem. Mauris blandit aliquet elit.
+                        </p>
+                    </div>
+                    <div class="slide">
+                        <h4>best designers<br>
+                            professional team of designers.
+                        </h4>
+                        <p>
+                            Curabitur arcu erat, accumsan id imperdiet et, porttitor at sem. Mauris blandit aliquet elit, eget tincidunt nibh pulvinar a. Curabitur aliquet quam. Accumsan id imperdiet et, porttitor.
+                        </p>
+                    </div>
+                </div>
+            </div>
+            <div class="slider-nav">
+                <div class="slide-prev"><i class="fas fa-angle-left fa-2x"></i></div>
+                <div class="slide-next"><i class="fas fa-angle-right fa-2x"></i></div>
+            </div>
+            <div class="slider-pos">
+                <span class="active"></span>
+                <span></span>
+                <span></span>
+            </div>
+        </div>
+
+        <!--* start services section -->
+        <section id="services">
+            <header>
+                <h2>services</h2>
+                <span class="line"><span class="circle"></span></span>
+                <p>Curabitur arcu erat, accumsan id imperdiet et, porttitor at sem. Mauris blandit aliquet elit, eget tincidunt.</p>
+            </header>
+
+            <div class="container">
+                <div class="service">
+                    <div class="icon"><i class="fas fa-laptop fa-3x"></i></div>
+                    <div>
+                        <h3>Vorem amet intuitive</h3>
+                        <p>Curabitur arcu erat, accumsan id imperdiet et, porttitor at sem. Mauris blandit aliquet elit, eget tincidunt nibh pulvinar. Curabitur aliquet quam.</p>
+                    </div>
+                </div>
+                <div class="service">
+                    <div class="icon"><i class="fas fa-cog fa-3x"></i></div>
+                    <div>
+                        <h3>Vorem amet intuitive</h3>
+                        <p>Curabitur arcu erat, accumsan id imperdiet et, porttitor at sem. Mauris blandit aliquet elit, eget tincidunt nibh pulvinar accent. Curabitur aliquet quam.</p>
+                    </div>
+                </div>
+                <div class="service">
+                    <div class="icon"><i class="fas fa-pencil-ruler fa-3x"></i></div>
+                    <div>
+                        <h3>Vorem amet intuitive</h3>
+                        <p>Curabitur arcu erat, accumsan id imperdiet et, porttitor at sem. Mauris blandit aliquet elit, eget tincidunt nibh pulvinar hope. Curabitur aliquet quam.</p>
+                    </div>
+                </div>
+                <div class="service">
+                    <div class="icon"><i class="fas fa-camera fa-3x"></i></div>
+                    <div>
+                        <h3>Vorem amet intuitive</h3>
+                        <p>Curabitur arcu erat, accumsan id imperdiet et, porttitor at sem. Mauris blandit aliquet elit, eget tincidunt nibh. Curabitur aliquet quam.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!--* start design section -->
+        <section id="design">
+                <img class="mobile-pic" src="./images/mobile.png" alt="Mobile photo">
+                <div class="our-design">
+                    <h4>our design comes with...
+                    </h4>
+                    <ul>
+                        <li> <i  class="fas fa-laptop fa-2x"></i> Responsive Design</li>
+                        <li> <i  class="fas fa-laptop fa-2x"></i> Modern And Clean Design</li>
+                        <li> <i  class="fas fa-laptop fa-2x"></i> Clean Code</li>
+                        <li> <i  class="fas fa-laptop fa-2x"></i> Browser Friendly</li>
                     </ul>
-                    <!-- <div class="search-bar"> -->
-                        <form action="" name="searchBar">
-                            <input class="" type="text" name="search-field">
-                            <button class="search-btn" type="submit">
-                                <i class="fas fa-search"></i>
-                            </button>
-                        </form>
-                    <!-- </div> -->
-                </nav>
-            </div>
-        </div>
-        <div class="intro-slider">
-            <div class="slides-wrapper">
-                <div class="slide">
-                    <h4>hello world!<br>
-                        we are kasper, we make art.
-                    </h4>
-                    <p>
-                        Curabitur arcu erat, accumsan id imperdiet et, porttitor at sem. Mauris blandit aliquet elit, eget tincidunt nibh pulvinar a. Curabitur aliquet quam. Accumsan id imperdiet et, porttitor at sem. Mauris blandit aliquet elit, eget tincidunt.
-                    </p>
                 </div>
-                <div class="slide">
-                    <h4>our gool!<br>
-                        satisfying your extreme imagination.
-                    </h4>
-                    <p>
-                        Curabitur arcu erat, accumsan id imperdiet et, porttitor at sem. Mauris blandit aliquet elit, eget tincidunt nibh pulvinar a. Curabitur aliquet quam. Accumsan id imperdiet et, porttitor at sem. Mauris blandit aliquet elit.
-                    </p>
-                </div>
-                <div class="slide">
-                    <h4>best designers<br>
-                        professional team of designers.
-                    </h4>
-                    <p>
-                        Curabitur arcu erat, accumsan id imperdiet et, porttitor at sem. Mauris blandit aliquet elit, eget tincidunt nibh pulvinar a. Curabitur aliquet quam. Accumsan id imperdiet et, porttitor.
-                    </p>
-                </div>
-            </div>
-        </div>
-        <div class="slider-nav">
-            <div class="slide-prev"><i class="fas fa-angle-left fa-2x"></i></div>
-            <div class="slide-next"><i class="fas fa-angle-right fa-2x"></i></div>
-        </div>
-        <div class="slider-pos">
-            <span class="active"></span>
-            <span></span>
-            <span></span>
-        </div>
-    </div>
+        </section>
 
-    <!--* start services section -->
-    <section id="services">
-        <header>
-            <h2>services</h2>
-            <span class="line"><span class="circle"></span></span>
-            <p>Curabitur arcu erat, accumsan id imperdiet et, porttitor at sem. Mauris blandit aliquet elit, eget tincidunt.</p>
-        </header>
-
-        <div class="container">
-            <div class="service">
-                <div class="icon"><i class="fas fa-laptop fa-3x"></i></div>
-                <div>
-                    <h3>Vorem amet intuitive</h3>
-                    <p>Curabitur arcu erat, accumsan id imperdiet et, porttitor at sem. Mauris blandit aliquet elit, eget tincidunt nibh pulvinar. Curabitur aliquet quam.</p>
-                </div>
-            </div>
-            <div class="service">
-                <div class="icon"><i class="fas fa-cog fa-3x"></i></div>
-                <div>
-                    <h3>Vorem amet intuitive</h3>
-                    <p>Curabitur arcu erat, accumsan id imperdiet et, porttitor at sem. Mauris blandit aliquet elit, eget tincidunt nibh pulvinar accent. Curabitur aliquet quam.</p>
-                </div>
-            </div>
-            <div class="service">
-                <div class="icon"><i class="fas fa-pencil-ruler fa-3x"></i></div>
-                <div>
-                    <h3>Vorem amet intuitive</h3>
-                    <p>Curabitur arcu erat, accumsan id imperdiet et, porttitor at sem. Mauris blandit aliquet elit, eget tincidunt nibh pulvinar hope. Curabitur aliquet quam.</p>
-                </div>
-            </div>
-            <div class="service">
-                <div class="icon"><i class="fas fa-camera fa-3x"></i></div>
-                <div>
-                    <h3>Vorem amet intuitive</h3>
-                    <p>Curabitur arcu erat, accumsan id imperdiet et, porttitor at sem. Mauris blandit aliquet elit, eget tincidunt nibh. Curabitur aliquet quam.</p>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!--* start design section -->
-    <section id="design">
-        <div class="overlay"></div> <!-- Add darkness to the background --> 
-            <img class="mobile-pic" src="./images/mobile.png" alt="Mobile photo">
-            <div class="our-design">
-                <h4>our design comes with...
-                </h4>
+        <!--* start portfolio section -->
+        <section id="portfolio">
+            <header>
+                <h2>portfolio</h2>
+                <span class="line"><span class="circle"></span></span>
+                <p>Curabitur arcu erat, accumsan id imperdiet et, porttitor at sem. Mauris blandit aliquet elit, eget tincidunt.</p>
+            </header>
+            <nav class="portfolio-links-wrapper">
                 <ul>
-                    <li> <i  class="fas fa-laptop fa-2x"></i> Responsive Design</li>
-                    <li> <i  class="fas fa-laptop fa-2x"></i> Modern And Clean Design</li>
-                    <li> <i  class="fas fa-laptop fa-2x"></i> Clean Code</li>
-                    <li> <i  class="fas fa-laptop fa-2x"></i> Browser Friendly</li>
+                    <li class="active" data-categorie="all">all</li>
+                    <li data-categorie="app">app</li>
+                    <li data-categorie="photo">photo</li>
+                    <li data-categorie="web">web</li>
+                    <li data-categorie="print">print</li>
                 </ul>
+            </nav>
+            <div class="gallery"> <!-- Need a container in large screens -->
+                <template>
+                    <div class="gall-item">
+                        <img src="" alt="gallery-photo" width="100%" height="auto">
+                        <div class="gall-item-caption">
+                            <p>Awesome Image</p>
+                            <p>Photography</p>
+                        </div>
+                    </div>
+                </template>
             </div>
-    </section>
+            <button class="more-items">More</button>
+        </section>
 
-    <!--* start portfolio section -->
-    <section id="portfolio">
-        <header>
-            <h2>portfolio</h2>
-            <span class="line"><span class="circle"></span></span>
-            <p>Curabitur arcu erat, accumsan id imperdiet et, porttitor at sem. Mauris blandit aliquet elit, eget tincidunt.</p>
-        </header>
-        <nav class="portfolio-links-wrapper">
-            <ul>
-                <li class="active" data-categorie="all">all</li>
-                <li data-categorie="app">app</li>
-                <li data-categorie="photo">photo</li>
-                <li data-categorie="web">web</li>
-                <li data-categorie="print">print</li>
-            </ul>
-        </nav>
-        <div class="gallery"> <!-- Need a container in large screens -->
-            <template>
-                <div class="gall-item">
-                    <img src="" alt="gallery-photo" width="100%" height="auto">
-                    <div class="gall-item-caption">
-                        <p>Awesome Image</p>
-                        <p>Photography</p>
+        <!-- start video section -->
+        <section id="video">
+            <video autoplay muted loop> 
+                <source src="./images/awesome-video.mp4" type="video/mp4">
+                Your browser doesn't support the video tag. <!-- Appear in case the browser couldn't display the video -->
+            </video>
+            <div class="video-banner">
+                <h4>super awesome video here</h4>
+                <p>its all you need</p>
+                <button>see more</button>
+            </div>
+        </section>
+
+        <!--* start about section -->
+        <section id="about">
+            <header>
+                <h2>about</h2>
+                <span class="line"><span class="circle"></span></span>
+                <p>Curabitur arcu erat, accumsan id imperdiet et, porttitor at sem. Mauris blandit aliquet elit, eget tincidunt.</p>
+            </header>
+            <div class="about-img-holder">
+                <img src="./images/about.png" alt="about-photo">
+            </div>
+            <!--* start statistics section -->
+            <section class="statistics">
+                <div class="container">
+                    <div class="stats-Wrapper">
+                        <div class="stat-card">
+                            <div class="icon"><i class="fas fa-mug-hot"></i></div>
+                            <h2>1.236</h2>
+                            <p>Coffee Drinks</p>
+                        </div>
+                        <div class="stat-card">
+                            <div class="icon"><i class="fas fa-folder"></i></div>
+                            <h2>256</h2>
+                            <p>Completed Projects</p>
+                        </div>
+                        <div class="stat-card">
+                            <div class="icon"><i class="fas fa-envelope"></i></div>
+                            <h2>1743</h2>
+                            <p>Mail Sent</p>
+                        </div>
+                        <div class="stat-card">
+                                <div class="icon"><i class="fas fa-trophy"></i></div>
+                            <h2>17</h2>
+                            <p>Awards Received</p>
+                        </div>
                     </div>
                 </div>
-            </template>
-        </div>
-        <button class="more-items">More</button>
-    </section>
+            </section>
 
-    <!-- start video section -->
-    <section id="video">
-        <div class="overlay"></div>
-        <video autoplay muted loop> 
-            <source src="./images/awesome-video.mp4" type="video/mp4">
-            Your browser doesn't support the video tag. <!-- Appear in case the browser couldn't display the video -->
-        </video>
-        <div class="video-banner">
-            <h4>super awesome video here</h4>
-            <p>its all you need</p>
-            <button>see more</button>
-        </div>
-    </section>
+            <!--* start testimonials/skills section -->
+            <section class="testimos-and-skills">
+                <div class="container">
+                    <aside class="testimonials-wrapper">
+                        <header>
+                            <h2>testimonials</h2>
+                            <p>Curabitur arcu erat, accumsan id imperdiet et, porttitor at sem. Mauris blandit aliquet elit, eget tincidunt.</p>
+                        </header>
+                        <div class="testimonials-slider">
+                            <div class="testimo-slide position0">
+                                <div class="testimo-part">
+                                    <div class="testimo">
+                                        <div class="photo-profile">
+                                            <img src="./images/testimo-1.jpg"></img>
+                                        </div>
+                                        <div class="testimo-quote">
+                                            <p>Curabitur arcu erat, accumsan id imperdiet et, porttitor at sem. Mauris blandit aliquet elit, eget tincidunt nibh pulvinar.</p>
+                                            <span class="name">Anna Doe, CEO</span>
+                                        </div>
+                                    </div>
+                                    <div class="testimo">
+                                        <div class="photo-profile">
+                                            <img src="./images/testimo-2.jpg"></img>
+                                        </div>
+                                        <div  class="testimo-quote">
+                                            <p>Curabitur arcu erat, accumsan id imperdiet et, porttitor at sem. Mauris blandit aliquet elit, eget tincidunt nibh pulvinar a. Curabitur aliquet quam.</p>
+                                            <span class="name">Karim Jigo, RHR</span>
+                                        </div>
+                                    </div>
+                                </div>
 
-    <!--* start about section -->
-    <section id="about">
-        <header>
-            <h2>about</h2>
-            <span class="line"><span class="circle"></span></span>
-            <p>Curabitur arcu erat, accumsan id imperdiet et, porttitor at sem. Mauris blandit aliquet elit, eget tincidunt.</p>
-        </header>
-        <div class="about-img-holder">
-            <img src="./images/about.png" alt="about-photo">
-        </div>
-        <!--* start statistics section -->
-        <section class="statistics">
-            <div class="overlay"></div>
-            <div class="container">
-                <div class="stats-Wrapper">
-                    <div class="stat-card">
-                        <div class="icon"><i class="fas fa-mug-hot"></i></div>
-                        <h2>1.236</h2>
-                        <p>Coffee Drinks</p>
-                    </div>
-                    <div class="stat-card">
-                        <div class="icon"><i class="fas fa-folder"></i></div>
-                        <h2>256</h2>
-                        <p>Completed Projects</p>
-                    </div>
-                    <div class="stat-card">
-                        <div class="icon"><i class="fas fa-envelope"></i></div>
-                        <h2>1743</h2>
-                        <p>Mail Sent</p>
-                    </div>
-                    <div class="stat-card">
-                            <div class="icon"><i class="fas fa-trophy"></i></div>
-                        <h2>17</h2>
-                        <p>Awards Received</p>
-                    </div>
+                                <div class="testimo-part">
+                                    <div class="testimo">
+                                        <div class="photo-profile">
+                                            <img src="./images/testimo-3.jpg"></img>
+                                        </div>
+                                        <div class="testimo-quote">
+                                            <p>Curabitur arcu erat, accumsan id imperdiet et, porttitor at sem. Mauris blandit aliquet elit, eget tincidunt nibh pulvinar a. Curabitur aliquet quam.</p>
+                                            <span class="name">Youssef EL., DEVM</span>
+                                        </div>
+                                    </div>
+                                    <div class="testimo">
+                                        <div class="photo-profile">
+                                            <img src="./images/testimo-4.jpg"></img>
+                                        </div>
+                                        <div  class="testimo-quote">
+                                            <p>Curabitur arcu erat, accumsan id imperdiet et, porttitor at sem. Mauris blandit aliquet elit, eget tincidunt nibh pulvinar a. Curabitur aliquet quam.</p>
+                                            <span class="name">Anis Rami, ACT</span>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="testimo-part">
+                                    <div class="testimo">
+                                        <div class="photo-profile">
+                                            <img src="./images/testimo-5.jpg"></img>
+                                        </div>
+                                        <div class="testimo-quote">
+                                            <p>Curabitur arcu erat, accumsan id imperdiet et, porttitor at sem. Mauris blandit aliquet elit, eget tincidunt.</p>
+                                            <span class="name">Iyan Bayk, MMG</span>
+                                        </div>
+                                    </div>
+                                    <div class="testimo">
+                                        <div class="photo-profile">
+                                            <img src="./images/testimo-6.jpg"></img>
+                                        </div>
+                                        <div  class="testimo-quote">
+                                            <p>Curabitur arcu erat, accumsan id imperdiet et, porttitor at sem. Mauris blandit aliquet elit, eget tincidunt nibh pulvinar a. Curabitur aliquet quam.</p>
+                                            <span class="name">Danni Roy, ESP</span>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="testimo-part">
+                                    <div class="testimo">
+                                        <div class="photo-profile">
+                                            <img src="./images/testimo-1.jpg"></img>
+                                        </div>
+                                        <div class="testimo-quote">
+                                            <p>Curabitur arcu erat, accumsan id imperdiet et, porttitor at sem. Mauris blandit aliquet elit, eget tincidunt nibh pulvinar.</p>
+                                            <span class="name">Anna Doe, CEO</span>
+                                        </div>
+                                    </div>
+                                    <div class="testimo">
+                                        <div class="photo-profile">
+                                            <img src="./images/testimo-2.jpg"></img>
+                                        </div>
+                                        <div  class="testimo-quote">
+                                            <p>Curabitur arcu erat, accumsan id imperdiet et, porttitor at sem. Mauris blandit aliquet elit, eget tincidunt nibh pulvinar a. Curabitur aliquet quam.</p>
+                                            <span class="name">Karim Jigo, RHR</span>
+                                        </div>
+                                    </div>
+                                </div>
+
+                            </div>
+                        </div>
+                        <div class="testimos-slider-pos">
+                            <span class="active"></span>
+                            <span></span>
+                            <span></span>
+                        </div>
+                    </aside>
+
+
+                    <aside class="skills-wrapper">
+                        <header>
+                            <h2>skills</h2>
+                            <p>Curabitur arcu erat, accumsan id imperdiet et, porttitor at sem. Mauris blandit aliquet elit, eget tincidunt.</p>
+                        </header>
+                        <div class="skills-techs">
+                            <div>
+                                <label>adobe</label>
+                                <div class="progress-bar" >
+                                    <div class="prog-value-bar" style="width: 90%" data-progress="90%"> </div>
+                                </div>
+                                <!-- <div class="progress-bar">
+                                    <div class="prog-value-bar  adobe">
+                                        <div class="value-ticket">90%</div>
+                                    </div>
+                                </div> -->
+                            </div>
+                            <div>
+                                <label>html & css</label>
+                                <div class="progress-bar">
+                                    <div class="prog-value-bar" style="width: 85%" data-progress="85%"> </div>
+                                </div>
+                            </div>
+                            <div>
+                                <label>javascript</label>
+                                <div class="progress-bar">
+                                    <div class="prog-value-bar" style="width: 70%" data-progress="70%">  </div>
+                                </div>
+                            </div>
+                            <div>
+                                <label>php</label>
+                                <div class="progress-bar">
+                                    <div class="prog-value-bar" style="width: 90%" data-progress="90%"> </div>
+                                </div>
+                            </div>
+                        </div>
+                    </aside>
+                </div>
+            </section>
+            <div class="quote-wrapper">
+                <div class="container">
+                    <q>accumsan id imperdiet est, porttitor at sem. Mauris blandit aliquet elit, eget tincidunt.</q>
+                    <cite>John Doe</cite>
                 </div>
             </div>
         </section>
 
-        <!--* start testimonials/skills section -->
-        <section class="testimos-and-skills">
+        <!--* start pricing section -->
+        <section id="pricing">
+            <header>
+                <h2>pricing</h2>
+                <span class="line"><span class="circle"></span></span>
+                <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit.</p>
+            </header>
+
             <div class="container">
-                <aside class="testimonials-wrapper">
-                    <header>
-                        <h2>testimonials</h2>
-                        <p>Curabitur arcu erat, accumsan id imperdiet et, porttitor at sem. Mauris blandit aliquet elit, eget tincidunt.</p>
-                    </header>
-                    <div class="testimonials-slider">
-                        <div class="testimo-slide position0">
-                            <div class="testimo-part">
-                                <div class="testimo">
-                                    <div class="photo-profile">
-                                        <img src="./images/testimo-1.jpg"></img>
-                                    </div>
-                                    <div class="testimo-quote">
-                                        <p>Curabitur arcu erat, accumsan id imperdiet et, porttitor at sem. Mauris blandit aliquet elit, eget tincidunt nibh pulvinar.</p>
-                                        <span class="name">Anna Doe, CEO</span>
-                                    </div>
-                                </div>
-                                <div class="testimo">
-                                    <div class="photo-profile">
-                                        <img src="./images/testimo-2.jpg"></img>
-                                    </div>
-                                    <div  class="testimo-quote">
-                                        <p>Curabitur arcu erat, accumsan id imperdiet et, porttitor at sem. Mauris blandit aliquet elit, eget tincidunt nibh pulvinar a. Curabitur aliquet quam.</p>
-                                        <span class="name">Karim Jigo, RHR</span>
-                                    </div>
-                                </div>
-                            </div>
-
-                            <div class="testimo-part">
-                                <div class="testimo">
-                                    <div class="photo-profile">
-                                        <img src="./images/testimo-3.jpg"></img>
-                                    </div>
-                                    <div class="testimo-quote">
-                                        <p>Curabitur arcu erat, accumsan id imperdiet et, porttitor at sem. Mauris blandit aliquet elit, eget tincidunt nibh pulvinar a. Curabitur aliquet quam.</p>
-                                        <span class="name">Youssef EL., DEVM</span>
-                                    </div>
-                                </div>
-                                <div class="testimo">
-                                    <div class="photo-profile">
-                                        <img src="./images/testimo-4.jpg"></img>
-                                    </div>
-                                    <div  class="testimo-quote">
-                                        <p>Curabitur arcu erat, accumsan id imperdiet et, porttitor at sem. Mauris blandit aliquet elit, eget tincidunt nibh pulvinar a. Curabitur aliquet quam.</p>
-                                        <span class="name">Anis Rami, ACT</span>
-                                    </div>
-                                </div>
-                            </div>
-
-                            <div class="testimo-part">
-                                <div class="testimo">
-                                    <div class="photo-profile">
-                                        <img src="./images/testimo-5.jpg"></img>
-                                    </div>
-                                    <div class="testimo-quote">
-                                        <p>Curabitur arcu erat, accumsan id imperdiet et, porttitor at sem. Mauris blandit aliquet elit, eget tincidunt.</p>
-                                        <span class="name">Iyan Bayk, MMG</span>
-                                    </div>
-                                </div>
-                                <div class="testimo">
-                                    <div class="photo-profile">
-                                        <img src="./images/testimo-6.jpg"></img>
-                                    </div>
-                                    <div  class="testimo-quote">
-                                        <p>Curabitur arcu erat, accumsan id imperdiet et, porttitor at sem. Mauris blandit aliquet elit, eget tincidunt nibh pulvinar a. Curabitur aliquet quam.</p>
-                                        <span class="name">Danni Roy, ESP</span>
-                                    </div>
-                                </div>
-                            </div>
-
-                            <div class="testimo-part">
-                                <div class="testimo">
-                                    <div class="photo-profile">
-                                        <img src="./images/testimo-1.jpg"></img>
-                                    </div>
-                                    <div class="testimo-quote">
-                                        <p>Curabitur arcu erat, accumsan id imperdiet et, porttitor at sem. Mauris blandit aliquet elit, eget tincidunt nibh pulvinar.</p>
-                                        <span class="name">Anna Doe, CEO</span>
-                                    </div>
-                                </div>
-                                <div class="testimo">
-                                    <div class="photo-profile">
-                                        <img src="./images/testimo-2.jpg"></img>
-                                    </div>
-                                    <div  class="testimo-quote">
-                                        <p>Curabitur arcu erat, accumsan id imperdiet et, porttitor at sem. Mauris blandit aliquet elit, eget tincidunt nibh pulvinar a. Curabitur aliquet quam.</p>
-                                        <span class="name">Karim Jigo, RHR</span>
-                                    </div>
-                                </div>
-                            </div>
-
-                        </div>
+                <div class="price-card">
+                    <div class="title">basic</div>
+                    <div class="price-holder">
+                        <span class="dollar">$</span>
+                        <span class="price-nbr">19</span>
+                        <span class="periode">/Mo</span>
                     </div>
-                    <div class="testimos-slider-pos">
-                        <span class="active"></span>
-                        <span></span>
-                        <span></span>
+                    <div class="price-features">
+                        <div class="feature">Feature No 1</div>
+                        <div class="feature">Extra Feature</div>
+                        <div class="feature">Feature No 2</div>
+                        <div class="feature">Feature</div>
                     </div>
-                </aside>
-
-
-                <aside class="skills-wrapper">
-                    <header>
-                        <h2>skills</h2>
-                        <p>Curabitur arcu erat, accumsan id imperdiet et, porttitor at sem. Mauris blandit aliquet elit, eget tincidunt.</p>
-                    </header>
-                    <div class="skills-techs">
-                        <div>
-                            <label>adobe</label>
-                            <div class="progress-bar" >
-                                <div class="prog-value-bar" style="width: 90%" data-progress="90%"> </div>
-                            </div>
-                            <!-- <div class="progress-bar">
-                                <div class="prog-value-bar  adobe">
-                                    <div class="value-ticket">90%</div>
-                                </div>
-                            </div> -->
-                        </div>
-                        <div>
-                            <label>html & css</label>
-                            <div class="progress-bar">
-                                <div class="prog-value-bar" style="width: 85%" data-progress="85%"> </div>
-                            </div>
-                        </div>
-                        <div>
-                            <label>javascript</label>
-                            <div class="progress-bar">
-                                <div class="prog-value-bar" style="width: 70%" data-progress="70%">  </div>
-                            </div>
-                        </div>
-                        <div>
-                            <label>php</label>
-                            <div class="progress-bar">
-                                <div class="prog-value-bar" style="width: 90%" data-progress="90%"> </div>
-                            </div>
-                        </div>
+                    <button class="bay">Buy Now</button>  
+                </div>
+                <div class="price-card">
+                    <div class="title">premium</div>
+                    <div class="price-holder">
+                        <span class="dollar">$</span>
+                        <span class="price-nbr">29</span>
+                        <span class="periode">/Mo</span>
                     </div>
-                </aside>
+                    <div class="price-features">
+                        <div class="feature">Feature No 1</div>
+                        <div class="feature">Extra Feature</div>
+                        <div class="feature">Feature No 2</div>
+                        <div class="feature">Feature</div>
+                    </div>
+                    <button class="bay">Buy Now</button>  
+                </div>
+                <div class="price-card">
+                    <div class="title">pro</div>
+                    <div class="price-holder">
+                        <span class="dollar">$</span>
+                        <span class="price-nbr">39</span>
+                        <span class="periode">/Mo</span>
+                    </div>
+                    <div class="price-features">
+                        <div class="feature">Feature No 1</div>
+                        <div class="feature">Extra Feature</div>
+                        <div class="feature">Feature No 2</div>
+                        <div class="feature">Feature</div>
+                    </div>
+                    <button class="bay">Buy Now</button>  
+                </div>
+                <div class="price-card">
+                    <div class="title">platinium</div>
+                    <div class="price-holder">
+                        <span class="dollar">$</span>
+                        <span class="price-nbr">49</span>
+                        <span class="periode">/Mo</span>
+                    </div>
+                    <div class="price-features">
+                        <div class="feature">Feature No 1</div>
+                        <div class="feature">Extra Feature</div>
+                        <div class="feature">Feature No 2</div>
+                        <div class="feature">Feature</div>
+                    </div>
+                    <button class="bay">Buy Now</button>  
+                </div>  
+            </div>   
+            <div class="contact-us">
+                <p>Contact us if you have special request.</p>
+                <a class="button" href="#contact">Contact Us</a>         
             </div>
         </section>
-        <div class="quote-wrapper">
-            <div class="overlay"></div>
+
+        <!--* start subscribe section -->
+        <section id="subscribe">
             <div class="container">
-                <q>accumsan id imperdiet est, porttitor at sem. Mauris blandit aliquet elit, eget tincidunt.</q>
-                <cite>John Doe</cite>
+                <form name="subscribe" action="">
+                        <i class="far fa-envelope"></i>
+                        <input type="email" name="mail" placeholder="Your email">
+                        <button type="submit">subscribe</button>
+                </form>
+                <p>Curabitur arcu erat, accumsan id imperdiet et, porttitor at sem. Mauris blan dit aliquet elit, eget tincidunt.</p>
             </div>
-        </div>
-    </section>
+        </section>
 
-    <!--* start pricing section -->
-    <section id="pricing">
-        <header>
-            <h2>pricing</h2>
-            <span class="line"><span class="circle"></span></span>
-            <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit.</p>
-        </header>
-
-        <div class="container">
-            <div class="price-card">
-                <div class="title">basic</div>
-                <div class="price-holder">
-                    <span class="dollar">$</span>
-                    <span class="price-nbr">19</span>
-                    <span class="periode">/Mo</span>
+        <!--* start contact section -->
+        <section id="contact">
+            <header>
+                <h2>contact</h2>
+                <span class="line"><span class="circle"></span></span>
+                <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit.</p>
+            </header>
+            <div class="container">
+                <div class="contact-infos-wrapper">
+                    <div>
+                        <h4>get in touch</h4>
+                        <p>+00123456789</p>
+                        <p>+00123456789</p>
+                    </div>
+                    <div>
+                        <h4>where we are</h4>
+                        <p>Awesome Address 17</p>
+                        <p>Vancouver</p>
+                        <p>+1-123-4567-890</p>
+                        <p>CANADA</p>
+                    </div>
                 </div>
-                <div class="price-features">
-                    <div class="feature">Feature No 1</div>
-                    <div class="feature">Extra Feature</div>
-                    <div class="feature">Feature No 2</div>
-                    <div class="feature">Feature</div>
-                </div>
-                <button class="bay">Buy Now</button>  
+                <form action="" name="contact-us">
+                    <input type="text" name="full-name" placeholder="Your Name">
+                    <input type="email" name="contact-mail" placeholder="Your email">
+                    <textarea type="text" name="msg" placeholder="Your Message"></textarea>
+                    <button type="submit">send message</button>
+                </form>
             </div>
-            <div class="price-card">
-                <div class="title">premium</div>
-                <div class="price-holder">
-                    <span class="dollar">$</span>
-                    <span class="price-nbr">29</span>
-                    <span class="periode">/Mo</span>
-                </div>
-                <div class="price-features">
-                    <div class="feature">Feature No 1</div>
-                    <div class="feature">Extra Feature</div>
-                    <div class="feature">Feature No 2</div>
-                    <div class="feature">Feature</div>
-                </div>
-                <button class="bay">Buy Now</button>  
-            </div>
-            <div class="price-card">
-                <div class="title">pro</div>
-                <div class="price-holder">
-                    <span class="dollar">$</span>
-                    <span class="price-nbr">39</span>
-                    <span class="periode">/Mo</span>
-                </div>
-                <div class="price-features">
-                    <div class="feature">Feature No 1</div>
-                    <div class="feature">Extra Feature</div>
-                    <div class="feature">Feature No 2</div>
-                    <div class="feature">Feature</div>
-                </div>
-                <button class="bay">Buy Now</button>  
-            </div>
-            <div class="price-card">
-                <div class="title">platinium</div>
-                <div class="price-holder">
-                    <span class="dollar">$</span>
-                    <span class="price-nbr">49</span>
-                    <span class="periode">/Mo</span>
-                </div>
-                <div class="price-features">
-                    <div class="feature">Feature No 1</div>
-                    <div class="feature">Extra Feature</div>
-                    <div class="feature">Feature No 2</div>
-                    <div class="feature">Feature</div>
-                </div>
-                <button class="bay">Buy Now</button>  
-            </div>  
-        </div>   
-         <div class="contact-us">
-             <p>Contact us if you have special request.</p>
-             <a class="button" href="#contact">Contact Us</a>         
-         </div>
-    </section>
+        </section>
 
-    <!--* start subscribe section -->
-    <section id="subscribe">
-        <div class="overlay"></div>
-        <div class="container">
-            <form name="subscribe" action="">
-                    <i class="far fa-envelope"></i>
-                    <input type="email" name="mail" placeholder="Your email">
-                    <button type="submit">subscribe</button>
-            </form>
-            <p>Curabitur arcu erat, accumsan id imperdiet et, porttitor at sem. Mauris blan dit aliquet elit, eget tincidunt.</p>
-        </div>
-    </section>
-
-    <!--* start contact section -->
-    <section id="contact">
-        <header>
-            <h2>contact</h2>
-            <span class="line"><span class="circle"></span></span>
-            <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit.</p>
-        </header>
-        <div class="container">
-            <div class="contact-infos-wrapper">
-                <div>
-                    <h4>get in touch</h4>
-                    <p>+00123456789</p>
-                    <p>+00123456789</p>
+        <!--* start Footer section -->
+        <section id="footer">
+                <img src="./images/logo.png" alt="kasper logo" class="logo">
+                <h4>we are social</h4>
+                <div class="social-icons">
+                    <a href="#" class="fab fa-facebook-f"></a>
+                    <a href="#" class="fab fa-twitter"></a>
+                    <a href="#" class="fas fa-home"></a>
+                    <a href="#" class="fab fa-linkedin"></a>
                 </div>
-                <div>
-                    <h4>where we are</h4>
-                    <p>Awesome Address 17</p>
-                    <p>Vancouver</p>
-                    <p>+1-123-4567-890</p>
-                    <p>CANADA</p>
-                </div>
-            </div>
-            <form action="" name="contact-us">
-                <input type="text" name="full-name" placeholder="Your Name">
-                <input type="email" name="contact-mail" placeholder="Your email">
-                <textarea type="text" name="msg" placeholder="Your Message"></textarea>
-                <button type="submit">send message</button>
-            </form>
-        </div>
-    </section>
-
-    <!--* start Footer section -->
-    <section id="footer">
-            <img src="./images/logo.png" alt="kasper logo" class="logo">
-            <h4>we are social</h4>
-            <div class="social-icons">
-                <a href="#" class="fab fa-facebook-f"></a>
-                <a href="#" class="fab fa-twitter"></a>
-                <a href="#" class="fas fa-home"></a>
-                <a href="#" class="fab fa-linkedin"></a>
-            </div>
-            <footer>
-                &copy; 2022 <span>Kasper</span> All Rights Reserved
-                <br>
-                (Coded By <a href="https://www.linkedin.com/in/youssef-el-hrouzi/">Youssef El-Hrouzi</a> for Learning purpose)
-            </footer>
-    </section>
-
+                <footer>
+                    &copy; 2022 <span>Kasper</span> All Rights Reserved
+                    <br>
+                    (Coded By <a href="https://www.linkedin.com/in/youssef-el-hrouzi/">Youssef El-Hrouzi</a> for Learning purpose)
+                </footer>
+        </section>
+    </div>
     <script src="./js/script.js"></script>
 </body>
 </html>

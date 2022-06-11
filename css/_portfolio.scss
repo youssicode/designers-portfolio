@@ -10,6 +10,7 @@ section#portfolio {
                 text-transform: capitalize;
                 padding: $sm;
                 cursor: pointer;
+                transition: all 400ms;
                 &.active {
                     background-color: $main-color;
                 }

@@ -52,13 +52,8 @@
 }
 
 %after-overlay {
-    position: relative;
-    z-index: 0;
-    &::after {
-        content: "";
-        @include absolute-positioning(0,0,0,0);
-        transform: none;
-        background-color: $overlay;
-        z-index: -1;
-    }
+    content: "";
+    @include absolute-positioning(0,0,0,0);
+    transform: none;
+    background-color: $overlay;
 }

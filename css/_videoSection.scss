@@ -1,10 +1,15 @@
 section#video {
-    position: relative;
     padding: 0;
+    position: relative;
+    &::after {
+        @extend %after-overlay;
+        z-index: 0;
+    }
     video{
         width: 100%;
     }
     .video-banner {
+        z-index: 1;
         width: 100%;
         text-align: center;
         background-color: $main-color-trans;
